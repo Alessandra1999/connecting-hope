@@ -5,13 +5,14 @@ import Slider from './ui/components/slider/slider';
 
 function App() {
   return (
-    <BrowserRouter>
+    /*<BrowserRouter>
       <div className="bg-slate-100 min-h-screen">
         <Navbar />
         <Router />
-        <Slider />
       </div>
-    </BrowserRouter>
+    </BrowserRouter>*/
+
+    <Slider />
   );
 }
 
