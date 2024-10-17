@@ -90,7 +90,7 @@ function Slider() {
                 Conectando esperança, transformando o mundo
               </Typography>
               <div className="flex justify-center gap-2">
-                <Button className="border-black border bg-gradient-to-b from-primary-light-250 to-primary-light-400 font-normal text-primary-light-750" size="md">
+                <Button className="bg-gradient-to-b from-primary-light-250 to-primary-light-400 font-normal text-primary-light-750" size="md">
                   Cadastre uma ONG
                 </Button>
               </div>
