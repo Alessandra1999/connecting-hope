@@ -8,7 +8,7 @@ export function PrivacyPolicy() {
         </div>
 
         <div className="text-xs flex flex-col gap-4 md:text-base lg:text-xl">
-          <p className="text-center">
+          <p className="text-justify">
             A sua privacidade é muito importante para nós. Esta Política de
             Privacidade descreve como coletamos, utilizamos, armazenamos e
             protegemos suas informações pessoais quando você utiliza a
