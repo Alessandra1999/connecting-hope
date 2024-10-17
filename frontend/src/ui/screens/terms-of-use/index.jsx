@@ -8,7 +8,7 @@ export function TermsOfUse() {
         </div>
 
         <div className="text-xs flex flex-col gap-4 md:text-base lg:text-xl">
-          <p className="text-center">
+          <p className="text-justify">
             Bem-vindo ao Connecting Hope! Estes Termos de Uso regem o acesso e o
             uso da nossa plataforma, que permite a criação de campanhas de
             arrecadação de doações por organizações não governamentais (ONGs) e
