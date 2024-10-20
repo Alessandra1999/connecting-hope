@@ -1,5 +1,5 @@
+import React from 'react';
 import { Navbar } from "../../components/navbar";
-
 import firstHeroImage from "../../../assets/images/home/first-image.jpg";
 import secondHeroImage from "../../../assets/images/home/second-image.jpg";
 import thirdHeroImage from "../../../assets/images/home/third-image.jpg";
@@ -8,9 +8,12 @@ import mainHeroImage from "../../../assets/images/home/main-hero.jpg";
 import peoplesWithHeart from "../../../assets/images/home/peoples-with-heart.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-import { CampaignsCard } from "../../components/campaigns-card";
+// import { CampaignsCard } from "../../components/campaigns-card";
+import NonProfitsCard from "../../components/campaigns-card/NonProfitsCard";
+import NonProfitsComment from "../../components/campaigns-card/NonProfitsComment";
 
 export function Home() {
+
   const campaignsMock = [
     {
       title: "Campanha X",
@@ -19,6 +22,12 @@ export function Home() {
         "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
       countOfLikes: 5,
       expiresIn: "10/11/2024",
+      feedbacks: [
+        {
+          personName: "Carlos",
+          feedback: "A ONG é fantástica! Eles realmente se importam com a comunidade e fazem a diferença na vida de muitas pessoas. Estou muito feliz em apoiar essa causa."
+        },
+      ]
     },
     {
       title: "Campanha Y",
@@ -27,18 +36,38 @@ export function Home() {
         "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
       countOfLikes: 2,
       expiresIn: "10/11/2024",
+      feedbacks: [
+        {
+          personName: "Ana",
+          feedback: "Trabalhar com esta ONG tem sido uma experiência transformadora. Eles são apaixonados pelo que fazem e isso se reflete em cada ação que realizam."
+        },
+      ]
     },
     {
       title: "Campanha W",
       description: "Descrição campanha W",
       userPictureUrl: "https://github.com/davifrt.png",
       countOfLikes: 100,
+      expiresIn: "22/01/2024",
+      feedbacks: [
+        {
+          personName: "João",
+          feedback: "Ótima experiência! A equipe é dedicada e acolhedora. Fiquei impressionado com o impacto positivo que eles têm nas vidas das pessoas que ajudam."
+        },
+      ]
     },
     {
       title: "Campanha W",
       description: "Descrição campanha W",
       userPictureUrl: "https://github.com/davifrt.png",
       countOfLikes: 100,
+      expiresIn: "18/12/2024",
+      feedbacks: [
+        {
+          personName: "Fernanda",
+          feedback: "Estou muito grata pela oportunidade de ajudar. A ONG é bem organizada e os projetos que eles implementam realmente mudam vidas. Recomendo a todos que se envolvam!"
+        }
+      ]
     },
   ];
 
@@ -48,8 +77,7 @@ export function Home() {
 
       <div>
         <div className="max-h-screen h-full relative">
-          {/* <div className="max-w-60 w-full h-[60vh] ml-32 rounded-xl"> */}
-          <div className="max-w-24 w-full h-[22vh] absolute top-0 left-8 rounded-xl">
+          <div className="max-w-24 w-full h-[24vh] absolute top-0 left-5 rounded-xl">
             <img
               className="w-full h-full object-cover rounded-b-xl"
               src={firstHeroImage}
@@ -57,7 +85,7 @@ export function Home() {
             />
           </div>
 
-          <div className="max-w-[25vh] w-full h-24 absolute top-2 right-0 rounded-xl">
+          <div className="max-w-[25vh] w-full h-24 absolute top-5 right-0 rounded-xl">
             <img
               className="w-full h-full object-cover rounded-l-xl"
               src={secondHeroImage}
@@ -76,7 +104,7 @@ export function Home() {
           />
         </div>
 
-        <div className="max-w-72 max-h-8 w-full h-full mt-6 px-2 flex items-center justify-center rounded-full bg-gradient-to-r from-primary-light-250 to-primary-light-450 border border-primary-light-750">
+        <div className="max-w-72 max-h-8 w-full h-full mt-6 px-2 flex items-center justify-center rounded-full border border-primary-750">
           <input
             type="text"
             placeholder="Encontre ONGs por nome ou categoria"
@@ -88,13 +116,13 @@ export function Home() {
           </button>
         </div>
 
-        <div className="max-w-72 w-full mt-4 text-center text-[10px]">
-          <p className="font-bold">
+        <div className="max-w-80 w-full mt-4 text-center text-[10px]">
+          <p className="text-xs font-medium">
             Encontre as ONGs que fazem a diferença em sua comunidade ou em áreas
             de interesse específicas.
           </p>
 
-          <p className="mt-2 font-bold">
+          <p className="text-xs mt-2 font-medium">
             Use a nossa ferramenta de pesquisa para descobrir <br />{" "}
             organizações que atuam em setores como educação,
             <br /> saúde, meio ambiente, assistência social, entre outros.
@@ -102,7 +130,7 @@ export function Home() {
         </div>
       </div>
       <div className="h-full">
-        <div className="max-w-[22vh] w-full h-20 absolute bottom-10 left-0 rounded-xl">
+        <div className="max-w-[22vh] w-full h-24 absolute bottom-10 left-0 rounded-xl">
           <img
             className="w-full h-full object-cover rounded-r-xl"
             src={thirdHeroImage}
@@ -119,25 +147,28 @@ export function Home() {
         </div>
       </div>
 
-      <div className="max-w-72 mx-auto py-5 flex flex-col items-center justify-center">
+      <div className="max-w-74 mx-auto py-5 flex flex-col items-center justify-center">
         <img
-          className="max-h-20"
+          className="max-h-[16vh]"
           src={peoplesWithHeart}
           alt="Pessoas segurando um pequeno coração da cor branco"
         />
 
-        <h2 className="font-bold text-xl">Campanhas Em Destaque</h2>
-        <p className="font-medium text-center">
-          Confira as campanhas mais relevantes do momento e saiba como você pode
-          contribuir para causas que fazem a diferença!
-        </p>
+        <h2 className="font-bold text-2xl">Campanhas Em Destaque</h2>
+        <div className="max-w-72">
+          <p className="text-xs font-medium text-center mt-3">
+            Confira as campanhas mais relevantes do momento e saiba como você pode
+            contribuir para causas que fazem a diferença!
+          </p>
+        </div>
       </div>
 
-      <div className="mx-auto py-8 rounded-2xl bg-gradient-to-br from-white to-primary-light-100 grid grid-cols-2 items-center justify-center justify-items-center gap-3">
-        {campaignsMock.map((campaignData) => (
-          <>
-            <CampaignsCard campaign={campaignData} />
-          </>
+      <div className="mx-auto py-8 rounded-2xl bg-gradient-to-br from-white to-primary-light-100 grid grid-cols-1 items-center justify-center justify-items-center gap-1">
+        {campaignsMock.map((campaignData, index) => (
+          <React.Fragment key={index}>
+            <NonProfitsCard campaign={campaignData} />
+            <NonProfitsComment feedbacks={campaignData.feedbacks} title={campaignData.title}/>
+          </React.Fragment>
         ))}
       </div>
     </div>
