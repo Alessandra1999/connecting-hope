@@ -16,60 +16,59 @@ export function Home() {
 
   const campaignsMock = [
     {
-      title: "Campanha X",
-      description: "Descrição campanha X",
-      imageUrl:
-        "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
-      countOfLikes: 5,
-      expiresIn: "10/11/2024",
+      title: "Abrace uma Vida",
+      description: "Uma campanha voltada para fornecer apoio emocional e material a crianças em situação de vulnerabilidade. Junte-se a nós e faça a diferença!",
+      imageUrl: "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
+      countOfLikes: 12,
+      expiresIn: "15/11/2024",
       feedbacks: [
         {
-          personName: "Carlos",
-          feedback: "A ONG é fantástica! Eles realmente se importam com a comunidade e fazem a diferença na vida de muitas pessoas. Estou muito feliz em apoiar essa causa."
+          personName: "Marcos",
+          feedback: "Participar dessa campanha foi uma experiência incrível! Saber que estou ajudando crianças a terem um futuro melhor não tem preço."
         },
       ]
     },
     {
-      title: "Campanha Y",
-      description: "Descrição campanha Y",
-      imageUrl:
-        "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
-      countOfLikes: 2,
-      expiresIn: "10/11/2024",
+      title: "Caminho para o Futuro",
+      description: "Iniciativa que promove a educação de jovens carentes, oferecendo cursos de capacitação e bolsas de estudo. Junte-se a essa transformação.",
+      imageUrl: "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
+      countOfLikes: 8,
+      expiresIn: "20/11/2024",
       feedbacks: [
         {
-          personName: "Ana",
-          feedback: "Trabalhar com esta ONG tem sido uma experiência transformadora. Eles são apaixonados pelo que fazem e isso se reflete em cada ação que realizam."
+          personName: "Beatriz",
+          feedback: "Essa ONG me deu a oportunidade de apoiar a educação de jovens e o impacto tem sido emocionante. Todos deveriam participar!"
         },
       ]
     },
     {
-      title: "Campanha W",
-      description: "Descrição campanha W",
+      title: "Sorrisos no Horizonte",
+      description: "Campanha para levar atendimento odontológico gratuito a comunidades carentes. Ajude a devolver sorrisos e autoestima para quem mais precisa.",
       userPictureUrl: "https://github.com/davifrt.png",
-      countOfLikes: 100,
-      expiresIn: "22/01/2024",
+      countOfLikes: 45,
+      expiresIn: "05/01/2024",
       feedbacks: [
         {
-          personName: "João",
-          feedback: "Ótima experiência! A equipe é dedicada e acolhedora. Fiquei impressionado com o impacto positivo que eles têm nas vidas das pessoas que ajudam."
+          personName: "Lucas",
+          feedback: "Ver o sorriso no rosto das crianças após o atendimento foi indescritível. A campanha realmente faz a diferença na vida das pessoas."
         },
       ]
     },
     {
-      title: "Campanha W",
-      description: "Descrição campanha W",
+      title: "Esperança em Movimento",
+      description: "A campanha busca levar alimentos e suprimentos a comunidades afetadas por desastres naturais. Sua ajuda pode salvar vidas!",
       userPictureUrl: "https://github.com/davifrt.png",
-      countOfLikes: 100,
-      expiresIn: "18/12/2024",
+      countOfLikes: 30,
+      expiresIn: "30/12/2024",
       feedbacks: [
         {
-          personName: "Fernanda",
-          feedback: "Estou muito grata pela oportunidade de ajudar. A ONG é bem organizada e os projetos que eles implementam realmente mudam vidas. Recomendo a todos que se envolvam!"
+          personName: "Sofia",
+          feedback: "A equipe dessa ONG é extremamente dedicada e eficiente. Saber que minha contribuição chegou a quem mais precisava me enche de orgulho."
         }
       ]
     },
   ];
+
 
   return (
     <div className="w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 text-xs">
@@ -163,14 +162,15 @@ export function Home() {
         </div>
       </div>
 
-      <div className="mx-auto py-8 rounded-2xl bg-gradient-to-br from-white to-primary-light-100 grid grid-cols-1 items-center justify-center justify-items-center gap-1">
+      <div className="mx-auto py-8 rounded-2xl bg-gradient-to-br from-white to-primary-light-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
         {campaignsMock.map((campaignData, index) => (
-          <React.Fragment key={index}>
+          <div key={index} className="flex flex-col items-center">
             <NonProfitsCard campaign={campaignData} />
-            <NonProfitsComment feedbacks={campaignData.feedbacks} title={campaignData.title}/>
-          </React.Fragment>
+            <NonProfitsComment feedbacks={campaignData.feedbacks} userPictureUrl={campaignData.userPictureUrl} title={campaignData.title} />
+          </div>
         ))}
       </div>
+
     </div>
   );
 }
