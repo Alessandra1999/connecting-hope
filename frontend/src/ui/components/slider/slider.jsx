@@ -67,8 +67,8 @@ const profiles = [
 function Slider() {
 
   return (
-    <div className="h-[43.75rem] flex w-screen">
-      <Carousel autoplay={true} loop={true} transition={{ duration: 1 }} className="h-full">
+    <div className="h-[43.75rem] flex w-screen max-w-full">
+      <Carousel autoplay={true} loop={true} transition={{ duration: 2 }} navigation={false} className="h-full">
         <div className="relative h-full w-full">
           <img
             src={Background}
