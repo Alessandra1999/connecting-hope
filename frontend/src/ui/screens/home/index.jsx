@@ -76,7 +76,7 @@ export function Home() {
 
       <div>
         <div className="relative max-h-screen h-full">
-          <div className="max-w-32 w-full h-[20vh] md:max-w-36 md:h-[28vh] lg:max-w-48 lg:h-[30vh] xl:max-w-48 xl:h-[36vh] absolute top-0 left-5 lg:left-12">
+          <div className="max-w-[26vw] w-full h-[22vh] md:max-w-[24vw] md:h-[28vh] lg:max-w-[24vw] lg:h-[30vh] xl:max-w-[14vw] xl:h-[36vh] absolute top-0 left-5 lg:left-12">
             <img
               className="w-full h-full object-cover rounded-b-3xl"
               src={firstHeroImage}
@@ -84,7 +84,7 @@ export function Home() {
             />
           </div>
 
-          <div className="max-w-[25vh] w-full h-24 md:max-w-95 md:h-[16vh] lg:max-w-[26vw] lg:h-[22vh] xl:max-w-[21vw] xl:h-[24vh]  absolute top-5 right-0 lg:top-12">
+          <div className="max-w-[25vh] w-full h-[14vh] md:max-w-95 md:h-[18vh] lg:max-w-[26vw] lg:h-[22vh] xl:max-w-[21vw] xl:h-[24vh] absolute top-5 right-0 lg:top-12">
             <img
               className="w-full h-full object-cover rounded-l-3xl"
               src={secondImage}
@@ -114,8 +114,8 @@ export function Home() {
             </button>
           </div>
 
-          <div className="max-w-80 w-full mt-4 text-center text-[10px] lg:max-w-sm md:text-sm lg:text-base xl:text-lg lg:max-w-lg xl:max-w-2xl lg:mt-10">
-            <div className="text-xs font-medium md:text-sm lg:text-base xl:text-lg lg:text-center md:max-w-[44vw]">
+          <div className="max-w-[82vw] w-full mt-4 text-center lg:max-w-sm lg:max-w-lg xl:max-w-2xl lg:mt-10">
+            <div className="text-xs font-medium md:text-sm lg:text-lg xl:text-xl lg:text-center ">
               <p>
                 Encontre as ONGs que fazem a diferença em sua comunidade ou em áreas de interesse específicas.
                 <span className="block mt-3 lg:inline">
@@ -130,7 +130,7 @@ export function Home() {
         </div>
 
         <div className="relative h-full">
-          <div className="max-w-[25vh] w-full h-28 md:max-w-90 md:h-[16vh] lg:max-w-[26vw] lg:h-[22vh] xl:max-w-[21vw] xl:h-[24vh] absolute bottom-5 left-0 lg:bottom-12">
+          <div className="max-w-[25vh] w-full h-[14vh] md:max-w-90 md:h-[18vh] lg:max-w-[26vw] lg:h-[22vh] xl:max-w-[21vw] xl:h-[24vh] absolute bottom-5 left-0 lg:bottom-12">
             <img
               className="w-full h-full object-cover rounded-r-3xl"
               src={thirdHeroImage}
@@ -138,7 +138,7 @@ export function Home() {
             />
           </div>
 
-          <div className="max-w-32 w-full h-[20vh] md:max-w-38 md:h-[28vh] lg:max-w-48 lg:h-[30vh] xl:max-w-48 xl:h-[36vh] absolute bottom-0 right-4 lg:right-12">
+          <div className="max-w-[26vw] w-full h-[22vh] md:max-w-[24vw] md:h-[28vh] lg:max-w-[24vw] lg:h-[30vh] xl:max-w-[16vw] xl:h-[36vh] absolute bottom-0 right-4 lg:right-10">
             <img
               className="w-full h-full object-cover rounded-t-3xl"
               src={fourthHeroImage}
