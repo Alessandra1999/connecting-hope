@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar } from "../../components/navbar";
 import firstHeroImage from "../../../assets/images/home/first-image.jpg";
-import secondHeroImage from "../../../assets/images/home/second-image.jpg";
-import thirdHeroImage from "../../../assets/images/home/third-image.jpg";
-import fourthHeroImage from "../../../assets/images/home/fourth-image.jpg";
+import secondImage from '../../../assets/images/home/second-image.png'
+import thirdHeroImage from "../../../assets/images/home/three-image.png";
+import fourthHeroImage from "../../../assets/images/home/four-image.png";
 import mainHeroImage from "../../../assets/images/home/main-hero.jpg";
 import peoplesWithHeart from "../../../assets/images/home/peoples-with-heart.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
@@ -75,90 +75,95 @@ export function Home() {
       <Navbar />
 
       <div>
-        <div className="max-h-screen h-full relative">
-          <div className="max-w-24 w-full h-[24vh] absolute top-0 left-5 rounded-xl">
+        <div className="relative max-h-screen h-full">
+          <div className="max-w-32 w-full h-[20vh] md:max-w-36 md:h-[28vh] lg:max-w-48 lg:h-[30vh] xl:max-w-48 xl:h-[36vh] absolute top-0 left-5 lg:left-12">
             <img
-              className="w-full h-full object-cover rounded-b-xl"
+              className="w-full h-full object-cover rounded-b-3xl"
               src={firstHeroImage}
               alt="Pessoas organizando caixas com itens para doação"
             />
           </div>
 
-          <div className="max-w-[25vh] w-full h-24 absolute top-5 right-0 rounded-xl">
+          <div className="max-w-[25vh] w-full h-24 md:max-w-95 md:h-[16vh] lg:max-w-[26vw] lg:h-[22vh] xl:max-w-[21vw] xl:h-[24vh]  absolute top-5 right-0 lg:top-12">
             <img
-              className="w-full h-full object-cover rounded-l-xl"
-              src={secondHeroImage}
+              className="w-full h-full object-cover rounded-l-3xl"
+              src={secondImage}
               alt="Pessoas fazendo doações de alimentos"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col h-max-without-navbar items-center justify-center bg-gradient-to-bl from-primary-light-200 from-60% to-primary-light-550 text-primary-light-750 dark:text-white px-4 lg:px-4">
+          <div className="max-w-32 max-h-32 md:max-w-48 md:max-h-48 lg:max-w-64 lg:max-h-64 xl:max-w-80 xl:max-h-80 w-full h-full rounded-full">
+            <img
+              src={mainHeroImage}
+              className="w-full h-full object-cover rounded-full"
+              alt="Mãos em círculo umas sobre as outras, demonstrando união"
+            />
+          </div>
+
+          <div className="max-w-72 max-h-8 w-full h-full mt-6 px-2 flex items-center justify-center rounded-full border border-primary-750 md:max-h-10 md:max-w-sm lg:max-h-12 lg:max-w-xl xl:max-h-14">
+            <input
+              type="text"
+              placeholder="Encontre ONGs por nome ou categoria"
+              className="w-[100%] h-full p-2 bg-transparent rounded-full placeholder:text-primary-light-750 focus:outline-none md:text-base lg:text-lg xl:text-xl"
+            />
+
+            <button className="p-2 md:p-3 lg:p-4 xl:p-5">
+              <FaMagnifyingGlass className="text-base md:text-lg lg:text-2xl xl:text-3xl" />
+            </button>
+          </div>
+
+          <div className="max-w-80 w-full mt-4 text-center text-[10px] lg:max-w-sm md:text-sm lg:text-base xl:text-lg lg:max-w-lg xl:max-w-2xl lg:mt-10">
+            <div className="text-xs font-medium md:text-sm lg:text-base xl:text-lg lg:text-center md:max-w-[44vw]">
+              <p>
+                Encontre as ONGs que fazem a diferença em sua comunidade ou em áreas de interesse específicas.
+                <span className="block mt-3 lg:inline">
+                  Use a nossa ferramenta de pesquisa para descobrir organizações que atuam em setores como educação,
+                </span>
+                <span className="block mb-10 lg:inline">
+                  saúde, meio ambiente, assistência social, entre outros.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative h-full">
+          <div className="max-w-[25vh] w-full h-28 md:max-w-90 md:h-[16vh] lg:max-w-[26vw] lg:h-[22vh] xl:max-w-[21vw] xl:h-[24vh] absolute bottom-5 left-0 lg:bottom-12">
+            <img
+              className="w-full h-full object-cover rounded-r-3xl"
+              src={thirdHeroImage}
+              alt="Pessoas organizando caixas com itens para doação"
+            />
+          </div>
+
+          <div className="max-w-32 w-full h-[20vh] md:max-w-38 md:h-[28vh] lg:max-w-48 lg:h-[30vh] xl:max-w-48 xl:h-[36vh] absolute bottom-0 right-4 lg:right-12">
+            <img
+              className="w-full h-full object-cover rounded-t-3xl"
+              src={fourthHeroImage}
+              alt="Pessoas organizando caixas com itens para doação"
             />
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col h-max-without-navbar items-center justify-center bg-gradient-to-bl from-primary-light-200 from-60% to-primary-light-550 text-primary-light-750 dark:text-white">
-        <div className="max-w-32 max-h-32 w-full h-full rounded-full">
-          <img
-            src={mainHeroImage}
-            className="w-full h-full object-cover rounded-full"
-            alt="Mãos em círculo umas sobre as outras, demonstrando união"
-          />
-        </div>
 
-        <div className="max-w-72 max-h-8 w-full h-full mt-6 px-2 flex items-center justify-center rounded-full border border-primary-750">
-          <input
-            type="text"
-            placeholder="Encontre ONGs por nome ou categoria"
-            className="w-[100%] h-full p-2 bg-transparent rounded-full placeholder:text-primary-light-750 focus:outline-none"
-          />
-
-          <button>
-            <FaMagnifyingGlass size={16} />
-          </button>
-        </div>
-
-        <div className="max-w-80 w-full mt-4 text-center text-[10px]">
-          <p className="text-xs font-medium">
-            Encontre as ONGs que fazem a diferença em sua comunidade ou em áreas
-            de interesse específicas.
-          </p>
-
-          <p className="text-xs mt-2 font-medium">
-            Use a nossa ferramenta de pesquisa para descobrir <br />{" "}
-            organizações que atuam em setores como educação,
-            <br /> saúde, meio ambiente, assistência social, entre outros.
-          </p>
-        </div>
-      </div>
-      <div className="h-full">
-        <div className="max-w-[22vh] w-full h-24 absolute bottom-10 left-0 rounded-xl">
-          <img
-            className="w-full h-full object-cover rounded-r-xl"
-            src={thirdHeroImage}
-            alt="Pessoas organizando caixas com itens para doação"
-          />
-        </div>
-
-        <div className="max-w-24 w-full h-[20vh] absolute bottom-0 right-4 rounded-xl">
-          <img
-            className="w-full h-full object-cover rounded-t-xl"
-            src={fourthHeroImage}
-            alt="Pessoas organizando caixas com itens para doação"
-          />
-        </div>
-      </div>
-
-      <div className="max-w-74 mx-auto py-5 flex flex-col items-center justify-center">
+      <div className="max-w-5xl p-6 mx-auto flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-6">
         <img
-          className="max-h-[16vh]"
+          className="max-h-[18vh] lg:max-h-[20vh] lg:w-2/2"
           src={peoplesWithHeart}
           alt="Pessoas segurando um pequeno coração da cor branco"
         />
 
-        <h2 className="font-bold text-2xl">Campanhas Em Destaque</h2>
-        <div className="max-w-72">
-          <p className="text-xs font-medium text-center mt-3">
-            Confira as campanhas mais relevantes do momento e saiba como você pode
-            contribuir para causas que fazem a diferença!
-          </p>
+        <div className="text-center lg:text-left lg:w-2/2">
+          <h2 className="font-bold text-2xl lg:text-5xl">Campanhas Em Destaque</h2>
+          <div className="max-w-full lg:max-w-3xl mt-3">
+            <p className="text-sm font-medium lg:text-2xl">
+              Confira as campanhas mais relevantes do momento e saiba como você pode
+              contribuir para causas que fazem a diferença!
+            </p>
+          </div>
         </div>
       </div>
 
