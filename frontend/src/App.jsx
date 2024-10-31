@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Navbar } from './ui/components/navbar';
 import { Router } from './router';
-import Slider from './ui/components/slider/slider';
+import About from './ui/screens/about/About';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       </div>
     </BrowserRouter>*/
 
-    <Slider />
+    <About />
   );
 }
 
