@@ -3,6 +3,7 @@ package com.hope.api_hope.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @NoArgsConstructor
@@ -18,7 +19,7 @@ public class CampaignUpdate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Date datePosted;
+    private LocalDate datePosted;
 
     private String description;
 

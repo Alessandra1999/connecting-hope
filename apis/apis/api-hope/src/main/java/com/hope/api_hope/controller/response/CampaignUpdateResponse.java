@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -13,6 +14,6 @@ public class CampaignUpdateResponse {
 
     private Long id;
     private String description;
-    private Date datePosted;
+    private LocalDate datePosted;
     private Long nonProfitsCampaignId;
 }

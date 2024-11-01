@@ -49,7 +49,7 @@ public class NonProfitsCampaignController {
         return postNonProfitsCampaignService.addNonProfitsCampaign(nonProfitsCampaignRequest);
     }
 
-    @PostMapping
+    @PostMapping("/campaignUpdate")
     public CampaignUpdateResponse addCampaignUpdate(@RequestBody CampaignUpdateRequest request) {
         return postCampaignUpdateService.addCampaignUpdate(request);
     }
