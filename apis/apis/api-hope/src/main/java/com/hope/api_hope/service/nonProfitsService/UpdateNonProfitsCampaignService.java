@@ -1,7 +1,7 @@
 package com.hope.api_hope.service.nonProfitsService;
 
 import com.hope.api_hope.dto.request.nonProfitsService.NonProfitsCampaignRequest;
-import com.hope.api_hope.dto.response.NonProfitsCampaignPageResponse.NonProfitsCampaignResponse;
+import com.hope.api_hope.dto.response.NonProfitsCampaignResponse;
 import com.hope.api_hope.model.NonProfitsCampaign;
 import com.hope.api_hope.repository.NonProfitsCampaignRepository;
 import org.springframework.beans.factory.annotation.Autowired;

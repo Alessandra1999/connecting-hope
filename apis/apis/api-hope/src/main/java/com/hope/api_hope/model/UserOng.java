@@ -1,6 +1,5 @@
 package com.hope.api_hope.model;
 
-import com.hope.api_hope.dto.OngDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -9,12 +8,12 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name ="NONPROFITS")
+@Table(name = "NON_PROFITS")
 public class UserOng {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idNonProfit;
+    private Long idNonProfit;
 
     @Column(nullable = false)
     private String nameNonProfit;
@@ -37,10 +36,7 @@ public class UserOng {
     @Column(nullable = false)
     private String cnpjNonprofit;
 
-    @Column(nullable = false)
-    private OngDTO.ThemeNonprofit themeNonprofit;
-
-    @OneToMany(mappedBy = "NONPROFITSCAMPAIGN")
+    @OneToMany(mappedBy = "userOng")
     private List<NonProfitsCampaign> nonProfitsCampaigns = new ArrayList<>();
 
     public void addNonProfitsCampaign(NonProfitsCampaign nonProfitsCampaign) {

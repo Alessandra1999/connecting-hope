@@ -1,12 +1,14 @@
 package com.hope.api_hope.dto.request.nonProfitsService;
 
 import com.hope.api_hope.model.enums.CampaignStatus;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.time.LocalDate;
 
+@Builder
 @Getter
 @Setter
 public class NonProfitsCampaignRequest {
@@ -22,6 +24,9 @@ public class NonProfitsCampaignRequest {
 
     @NotNull
     private double fundsGoal;
+
+    @NotNull
+    private Long nonprofits_id;
 
     @NotNull
     private LocalDate campaignEnd;

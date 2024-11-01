@@ -1,4 +1,4 @@
-package com.hope.api_hope.dto.response.NonProfitsCampaignPageResponse;
+package com.hope.api_hope.dto.response;
 
 import lombok.*;
 
@@ -11,13 +11,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class NonProfitsCampaignResponse {
-    private int id;
+    private Long id;
     private String name;
     private String description;
     private String image;
     private BigDecimal fundsGoal;
     private BigDecimal fundsCurrent;
-
+    private Long nonProfitsId;
     private LocalDate campaignStart;
     private LocalDate campaignEnd;
 }
