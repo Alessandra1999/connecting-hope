@@ -24,6 +24,7 @@ public class PostCampaignUpdateService {
     @Autowired
     NowService nowService;
 
+
     @Transactional
     public CampaignUpdateResponse addCampaignUpdate(CampaignUpdateRequest request) {
 

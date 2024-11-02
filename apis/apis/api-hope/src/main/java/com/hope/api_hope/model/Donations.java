@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -31,7 +32,7 @@ public class Donations {
     private BigInteger value;
 
     @Column(nullable = false)
-    private Date dayDonated;
+    private LocalDate dayDonated;
 
     @ManyToOne
     @JoinColumn(name = "non_profits_campaign_id")

@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Builder
@@ -25,5 +26,6 @@ public class DonationResponse {
     private BigInteger value;
 
     @Column(nullable = false)
-    private Date dayDonated;
+    private LocalDate dayDonated;
+
 }

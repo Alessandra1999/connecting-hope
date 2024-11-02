@@ -46,7 +46,7 @@ public class NonProfitsCampaign {
 
     @ManyToOne
     @JoinColumn(name = "non_profits_id")
-    private UserOng userOng;
+    private NonProfits nonProfits;
 
     @OneToMany(mappedBy = "nonProfitsCampaign")
     private List<Donations> donations = new ArrayList<>();

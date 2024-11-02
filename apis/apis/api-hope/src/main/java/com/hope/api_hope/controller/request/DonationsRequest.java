@@ -20,4 +20,7 @@ public class DonationsRequest {
     @Column(nullable = false)
     private BigInteger value;
 
+    @Column(nullable = false)
+    private Long nonProfitsCampaignId;
+
 }

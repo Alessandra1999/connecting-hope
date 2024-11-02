@@ -9,11 +9,11 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "NON_PROFITS")
-public class UserOng {
+public class NonProfits {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idNonProfit;
+    private Long id;
 
     @Column(nullable = false)
     private String nameNonProfit;
@@ -36,11 +36,11 @@ public class UserOng {
     @Column(nullable = false)
     private String cnpjNonprofit;
 
-    @OneToMany(mappedBy = "userOng")
+    @OneToMany(mappedBy = "nonProfits")
     private List<NonProfitsCampaign> nonProfitsCampaigns = new ArrayList<>();
 
     public void addNonProfitsCampaign(NonProfitsCampaign nonProfitsCampaign) {
         this.nonProfitsCampaigns.add(nonProfitsCampaign);
-        nonProfitsCampaign.setUserOng(this);
+        nonProfitsCampaign.setNonProfits(this);
     }
 }

@@ -33,7 +33,7 @@ public class NonProfitsCampaignMapper {
                 .image(nonProfitsCampaign.getImage())
                 .name(nonProfitsCampaign.getName())
                 .fundsGoal(BigDecimal.valueOf(nonProfitsCampaign.getFundsGoal()))
-                .nonProfitsId(nonProfitsCampaign.getUserOng().getIdNonProfit())
+                .nonProfitsId(nonProfitsCampaign.getNonProfits().getId())
                 .build();
 
     }
