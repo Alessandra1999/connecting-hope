@@ -21,6 +21,4 @@ public class OngDTO {
 
     private String cnpjNonprofit;
 
-
-
 }

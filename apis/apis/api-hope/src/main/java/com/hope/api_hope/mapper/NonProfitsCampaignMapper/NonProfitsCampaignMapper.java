@@ -37,4 +37,5 @@ public class NonProfitsCampaignMapper {
                 .build();
 
     }
+
 }

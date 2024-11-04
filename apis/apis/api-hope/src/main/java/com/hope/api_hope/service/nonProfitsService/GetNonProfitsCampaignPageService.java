@@ -23,5 +23,6 @@ public class GetNonProfitsCampaignPageService {
         Page<NonProfitsCampaignResponse> response = nonProfitsCampaigns.map(NonProfitsCampaignMapper::toResponse);
 
         return response;
+
     }
 }

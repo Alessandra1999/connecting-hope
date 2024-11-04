@@ -20,4 +20,5 @@ public class DonationController {
     public Page<DonationResponse> donations(Pageable pageable) {
         return getDonationService.list(pageable);
     }
+
 }

@@ -39,4 +39,5 @@ public class NonProfitsCampaignRequest {
 
     @NotNull
     private double fundsCurrent;
+
 }

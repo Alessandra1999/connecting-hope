@@ -20,5 +20,6 @@ public class CampaignUpdateMapper {
                 .datePosted(campaignUpdate.getDatePosted())
                 .nonProfitsCampaignId(campaignUpdate.getNonProfitsCampaign().getId())
                 .build();
+
     }
 }

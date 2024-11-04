@@ -23,5 +23,6 @@ public class GetCampaignUpdatesByCampaignIdService {
                 .map(CampaignUpdateMapper::toResponse);
 
         return campaignUpdates;
+
     }
 }

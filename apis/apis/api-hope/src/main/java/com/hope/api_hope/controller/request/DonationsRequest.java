@@ -11,6 +11,7 @@ import java.math.BigInteger;
 @Getter
 @Setter
 public class DonationsRequest {
+
     @Column(nullable = false)
     private Long donorId;
 

@@ -26,5 +26,6 @@ public class UserMapper {
         userDTO.setPasswordUser(user.getPassword());
 
         return userDTO;
+
     }
 }

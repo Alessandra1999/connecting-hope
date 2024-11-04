@@ -31,5 +31,6 @@ public class UpdateNonProfitsCampaignService {
         nonProfitsCampaignRepository.save(nonProfitsCampaign);
 
         return toResponse(nonProfitsCampaign);
+
     }
 }
