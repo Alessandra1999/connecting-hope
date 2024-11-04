@@ -1,6 +1,6 @@
-import { Route, Switch } from 'react-router-dom';
-
-import { Profile } from '../ui/screens/profile';
+import { Route, Switch } from "react-router-dom";
+import { Profile } from "../ui/screens/profile";
+import { About } from "../ui/screens/about/About";
 
 export function Router() {
   return (
@@ -11,7 +11,8 @@ export function Router() {
         <Route path="/profile">
           <Profile />
         </Route>
-        <Route path="/">PUBLIC HOME</Route>Í
+        <Route path="/">PUBLIC HOME</Route>
+        <Route path="/about" element={<About />} />
       </Switch>
     </div>
   );
