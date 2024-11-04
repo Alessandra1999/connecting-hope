@@ -20,5 +20,6 @@ public class GetDonationService {
     public Page<DonationResponse> list(Pageable pageable) {
         Page<DonationResponse> donationResponses = donationRepository.findAll(pageable).map(DonationMapper::toResponse);
         return donationResponses;
+
     }
 }

@@ -10,6 +10,5 @@ import lombok.Setter;
 public class CampaignUpdateRequest {
 
     private String description;
-
     private Long nonProfitsCampaignId;
 }

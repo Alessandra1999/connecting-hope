@@ -21,7 +21,6 @@ public class GetCampaignsByUserService {
         Page<NonProfitsCampaign> campaignsByUser = nonProfitsCampaignRepository.findByNonProfitsId(id, pageable);
 
         Page<NonProfitsCampaignResponse> response = campaignsByUser.map(NonProfitsCampaignMapper::toResponse);
-
         return response;
     }
 }

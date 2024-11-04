@@ -78,5 +78,4 @@ public class NonProfitsCampaignController {
     public DonationResponse addDonation(@RequestBody DonationsRequest donationsRequest) {
         return postDonationService.addCampaignUpdate(donationsRequest);
     }
-
 }

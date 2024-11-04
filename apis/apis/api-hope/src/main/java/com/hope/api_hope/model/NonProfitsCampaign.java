@@ -12,7 +12,6 @@ import java.util.List;
 @Data
 @Table(name="NON_PROFITS_CAMPAIGN")
 public class NonProfitsCampaign {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -62,3 +61,4 @@ public class NonProfitsCampaign {
         campaignUpdate.setNonProfitsCampaign(this);
     }
 }
+

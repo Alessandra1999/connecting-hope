@@ -14,7 +14,6 @@ import java.util.Date;
 @Entity
 @Table(name="CAMPAIGN_UPDATES")
 public class CampaignUpdate {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,4 +25,5 @@ public class CampaignUpdate {
     @ManyToOne
     @JoinColumn(name = "non_profits_campaign_id")
     private NonProfitsCampaign nonProfitsCampaign;
+
 }

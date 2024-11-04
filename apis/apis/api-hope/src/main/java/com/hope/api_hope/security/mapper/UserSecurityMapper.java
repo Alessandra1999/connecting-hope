@@ -4,6 +4,7 @@ import com.hope.api_hope.dto.UserDTO;
 import com.hope.api_hope.model.User;
 
 public class UserSecurityMapper {
+
     public static User toEntity(UserDTO request) {
         User entity = new User();
         entity.setEmail(request.getEmailUser());

@@ -34,5 +34,6 @@ public class PostNonProfitsCampaignService {
         nonProfitsCampaignRepository.save(campaign);
 
         return NonProfitsCampaignMapper.toResponse(campaign);
+
     }
 }

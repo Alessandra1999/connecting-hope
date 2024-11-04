@@ -16,5 +16,4 @@ public class UserDTO {
     private String passwordUser;
 
     private String addressUser;
-
 }

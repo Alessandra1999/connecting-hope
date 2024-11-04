@@ -19,4 +19,5 @@ public class LoginController {
     public UserDTO login() {
         return service.getResponse();
     }
+
 }

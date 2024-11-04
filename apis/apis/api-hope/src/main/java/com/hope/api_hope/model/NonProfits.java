@@ -40,6 +40,7 @@ public class NonProfits {
     private List<NonProfitsCampaign> nonProfitsCampaigns = new ArrayList<>();
 
     public void addNonProfitsCampaign(NonProfitsCampaign nonProfitsCampaign) {
+
         this.nonProfitsCampaigns.add(nonProfitsCampaign);
         nonProfitsCampaign.setNonProfits(this);
     }

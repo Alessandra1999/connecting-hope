@@ -17,7 +17,6 @@ import java.util.Date;
 @NoArgsConstructor
 @Table(name="DONATIONS")
 public class Donations {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

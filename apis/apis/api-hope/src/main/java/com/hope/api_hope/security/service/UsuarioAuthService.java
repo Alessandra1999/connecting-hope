@@ -16,6 +16,7 @@ import static java.util.Objects.nonNull;
 
 @Service
 public class UsuarioAuthService {
+
     @Autowired
     private UserRepository userRepository;
 
