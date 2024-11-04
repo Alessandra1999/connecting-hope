@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class UserDTO {
 
-    private int idUser;
+    private Long idUser;
 
     private String nameUser;
 
@@ -16,12 +16,4 @@ public class UserDTO {
     private String passwordUser;
 
     private String addressUser;
-
-    private ThemeUser themeUser;
-
-    public enum ThemeUser{
-        LIGHT,
-        DARK,
-        CUSTOM
-    }
 }

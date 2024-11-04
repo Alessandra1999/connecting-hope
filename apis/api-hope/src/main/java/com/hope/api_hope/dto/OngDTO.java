@@ -21,12 +21,4 @@ public class OngDTO {
 
     private String cnpjNonprofit;
 
-    private ThemeNonprofit themeNonprofit;
-
-    public enum ThemeNonprofit{
-        LIGHT,
-        DARK,
-        CUSTOM
-    }
-
 }

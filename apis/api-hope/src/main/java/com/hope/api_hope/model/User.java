@@ -1,17 +1,20 @@
 package com.hope.api_hope.model;
 
-import com.hope.api_hope.dto.UserDTO;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Data
+@Getter
+@Setter
 @Table(name ="USERS")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idUser;
+    private Long id;
 
     @Column(nullable = false)
     private String nameUser;
@@ -20,16 +23,12 @@ public class User {
     private String photoUser;
 
     @Column(nullable = false)
-    private String passwordUser;
+    private String password;
 
     @Column(nullable = false)
-    private String emailUser;
+    private String email;
 
     @Column(nullable = false)
     private String addressUser;
-
-    @Column(nullable = false)
-    private UserDTO.ThemeUser themeUser;
-
 
 }
