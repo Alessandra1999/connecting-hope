@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Carousel } from '@material-tailwind/react';
 
 export function CarouselDefault({ images }) {
