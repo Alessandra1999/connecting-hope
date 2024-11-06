@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const OngForm = () => {
     return (
-        <div className="flex flex-col items-center p-6 rounded-3xl shadow-lg max-w-sm mx-auto mt-10 mb-10"
+        <div className="flex flex-col items-center p-6 rounded-3xl shadow-2xl max-w-sm mx-auto mt-10 mb-10"
             style={{
                 background: "linear-gradient(to bottom right, rgba(86, 105, 129, 0.8) 60%, rgba(203, 218, 213, 0.1) 90%)"
             }}
