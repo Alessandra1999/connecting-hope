@@ -1,10 +1,13 @@
 import { Button } from '@material-tailwind/react';
 
 import { ProgressBar, CarouselDefault } from '../../components';
-import Img04 from '../../../assets/ImgForCarousel/Img04.png';
-import Img05 from '../../../assets/ImgForCarousel/Img05.png';
-import Img06 from '../../../assets/ImgForCarousel/Img06.png';
-import Img07 from '../../../assets/ImgForCarousel/Img07.png';
+// import { NonProfitsCard } from '../../components/campaigns-card/NonProfitsCard';
+import { CampaignsCard } from '../../components';
+
+import Img04 from '../../../assets/images/ImgForCarousel/Img04.png';
+import Img05 from '../../../assets/images/ImgForCarousel/Img05.png';
+import Img06 from '../../../assets/images/ImgForCarousel/Img06.png';
+import Img07 from '../../../assets/images/ImgForCarousel/Img07.png';
 
 export function ShowCampaign() {
   const images = [
@@ -85,6 +88,10 @@ export function ShowCampaign() {
             }
           </div>
         </div>
+      </div>
+
+      <div>
+        <CampaignsCard />
       </div>
     </div>
   );
