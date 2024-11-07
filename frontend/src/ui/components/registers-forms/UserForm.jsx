@@ -2,9 +2,9 @@ import React from "react";
 import { FaCamera, FaUser } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-const OngForm = () => {
+const UserForm = ({isOpen, onClose, openLoginForm}) => {
     return (
-        <div className="flex flex-col items-center p-6 rounded-3xl shadow-2xl max-w-sm mx-auto mt-10 mb-10"
+        <div className="flex flex-col items-center p-6 rounded-3xl shadow-2xl max-w-sm mx-auto"
             style={{
                 background: "linear-gradient(to bottom right, rgba(86, 105, 129, 0.8) 60%, rgba(203, 218, 213, 0.1) 90%)"
             }}
@@ -22,7 +22,7 @@ const OngForm = () => {
 
             <div className="w-full text-left space-y-4 text-[#1E1E1E]">
                 <div>
-                    <label className="block text-sm font-semibold">ONG:</label>
+                    <label className="block text-sm font-semibold">Nome:</label>
                     <input
                         type="text"
                         placeholder="Nome Fantasia"
@@ -30,7 +30,7 @@ const OngForm = () => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">CNPJ:</label>
+                    <label className="block text-sm font-semibold">CPF:</label>
                     <input
                         type="text"
                         placeholder="XX. XXX. XXX/0001-XX"
@@ -70,9 +70,8 @@ const OngForm = () => {
                 </span>
             </div>
 
-
             <div className="flex w-full space-x-4">
-                <button  className="w-full mt-4 py-3 bg-white hover:bg-gray-300 text-[#34344E] rounded-xl font-semibold">
+                <button onClick={openLoginForm} className="w-full mt-4 py-3 bg-white hover:bg-gray-300 text-[#34344E] rounded-xl font-semibold">
                     Entrar
                 </button>
 
@@ -80,7 +79,6 @@ const OngForm = () => {
                     Registre-se
                 </button>
             </div>
-
 
             <div className="flex w-full items-center my-4">
                 <hr className="w-full color-white-900" />
@@ -94,9 +92,8 @@ const OngForm = () => {
                     <span>Continue com o Google</span>
                 </button>
             </div>
-
         </div>
     );
 };
 
-export default OngForm;
+export default UserForm;
