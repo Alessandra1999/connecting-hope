@@ -2,9 +2,9 @@ import React from "react";
 import { FaCamera, FaUser } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-const UserForm = ({isOpen, onClose, openLoginForm}) => {
+const UserForm = ({openLoginForm}) => {
     return (
-        <div className="flex flex-col items-center p-6 rounded-3xl shadow-2xl max-w-sm mx-auto"
+        <div className="flex flex-col items-center p-6 rounded-3xl shadow-2xl max-w-[86vw] sm:max-w-sm overflow-y-auto mx-auto my-8 sm:my-10 mb-10"
             style={{
                 background: "linear-gradient(to bottom right, rgba(86, 105, 129, 0.8) 60%, rgba(203, 218, 213, 0.1) 90%)"
             }}
@@ -22,7 +22,7 @@ const UserForm = ({isOpen, onClose, openLoginForm}) => {
 
             <div className="w-full text-left space-y-4 text-[#1E1E1E]">
                 <div>
-                    <label className="block text-sm font-semibold">Nome:</label>
+                    <label className="block text-sm font-semibold dark:text-white">Nome:</label>
                     <input
                         type="text"
                         placeholder="Nome Fantasia"
@@ -30,7 +30,7 @@ const UserForm = ({isOpen, onClose, openLoginForm}) => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">CPF:</label>
+                    <label className="block text-sm font-semibold dark:text-white">CPF:</label>
                     <input
                         type="text"
                         placeholder="XX. XXX. XXX/0001-XX"
@@ -38,14 +38,14 @@ const UserForm = ({isOpen, onClose, openLoginForm}) => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">End.:</label>
+                    <label className="block text-sm font-semibold dark:text-white">End.:</label>
                     <textarea
                         placeholder="Rua da invenção, nº NN, bairro Jardim, cidade Paixão"
                         className="w-full p-3 rounded-xl hover:bg-gray-300 bg-white"
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">E-mail:</label>
+                    <label className="block text-sm font-semibold dark:text-white">E-mail:</label>
                     <input
                         type="email"
                         placeholder="batata@gmail.com"
@@ -53,7 +53,7 @@ const UserForm = ({isOpen, onClose, openLoginForm}) => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">Senha:</label>
+                    <label className="block text-sm font-semibold dark:text-white">Senha:</label>
                     <input
                         type="password"
                         placeholder="********"
@@ -65,7 +65,7 @@ const UserForm = ({isOpen, onClose, openLoginForm}) => {
 
             <div className="flex items-center mt-4">
                 <input type="checkbox" className="mr-2" />
-                <span className="text-sm font-bold text-[#1E1E1E]">
+                <span className="text-sm font-bold text-[#1E1E1E] dark:text-white">
                     Concordo com os <a href="#" className="underline">Termos de Uso</a> e as <a href="#" className="underline">Políticas de Privacidade</a>
                 </span>
             </div>
@@ -80,10 +80,11 @@ const UserForm = ({isOpen, onClose, openLoginForm}) => {
                 </button>
             </div>
 
+
             <div className="flex w-full items-center my-4">
-                <hr className="w-full color-white-900" />
-                <span className="px-2 text-[#1E1E1E] font-semibold">OU</span>
-                <hr className="w-full border-black-900" />
+                <hr className="w-full border-[#1E1E1E] dark:border-white" />
+                <span className="px-2 text-[#1E1E1E] font-semibold dark:text-white">OU</span>
+                <hr className="w-full border-[#1E1E1E] dark:border-white" />
             </div>
 
             <div className="relative w-full">
