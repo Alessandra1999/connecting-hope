@@ -1,0 +1,1 @@
+export { InfoTextCards } from './infoTextCards';

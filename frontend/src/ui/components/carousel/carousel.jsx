@@ -7,7 +7,7 @@ export function CarouselDefault({ images }) {
         autoplay={true}
         loop={true}
         transition={{ duration: 1 }}
-        navigation={false}
+        navigation={() => false}
         className="rounded-xl overflow-hidden"
       >
         {images.map(({ img, alt }, idx) => (
