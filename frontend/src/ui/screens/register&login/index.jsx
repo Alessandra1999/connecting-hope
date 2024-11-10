@@ -1,82 +1,82 @@
-import React, { useState } from 'react';
-import UserForm from '../../components/registers-forms/UserForm';
-import LoginForm from '../../components/registers-forms/LoginForm';
+import React, { useState } from "react";
+import { DesktopScreen } from "./DesktopScreen";
+import { MobileScreen } from "./MobileScreen";
+import { Navbar } from "../../components/navbar";
+import { Footer } from "../../components/footer/footer";
 
 export function InitialScreen() {
     const [isUserFormOpen, setUserFormOpen] = useState(false);
     const [isLoginFormOpen, setLoginFormOpen] = useState(true);
+    const [isRecoveryPasswordOpen, setRecoveryPasswordFormOpen] = useState(false);
+    const [isOngFormOpen, setOngFormOpen] = useState(false);
 
     const openUserForm = () => {
         setUserFormOpen(true);
         setLoginFormOpen(false);
+        setRecoveryPasswordFormOpen(false);
+        setOngFormOpen(false);
+    };
+
+    const openOngForm = () => {
+        setOngFormOpen(true);
+        setUserFormOpen(false);
+        setLoginFormOpen(false);
+        setRecoveryPasswordFormOpen(false);
     };
 
     const openLoginForm = () => {
         setLoginFormOpen(true);
         setUserFormOpen(false);
+        setRecoveryPasswordFormOpen(false);
+        setOngFormOpen(false);
+    };
+
+    const openRecoveryForm = () => {
+        setRecoveryPasswordFormOpen(true);
+        setLoginFormOpen(false);
+        setUserFormOpen(false);
+        setOngFormOpen(false);
     };
 
     const closeForms = () => {
         setUserFormOpen(false);
         setLoginFormOpen(false);
+        setRecoveryPasswordFormOpen(false);
+        setOngFormOpen(false);
     };
 
     return (
-        <div className="w-full h-screen bg-gradient-to-b from-primary-light-250 to-primary-light-400 flex items-center justify-center text-xs">
+        <div className="w-full min-h-screen bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:bg-gradient-to-b dark:from-primary-dark-250 dark:to-primary-dark-400 flex flex-col overflow-hidden">
+            <Navbar />
             
-            {/* Retângulos coloridos visíveis apenas em telas grandes */}
-            <div className="hidden lg:flex p-8 max-w-6xl space-x-10 relative">
-                <div
-                    className={`grid grid-cols-2 gap-8 rounded-xl shadow-xl p-8 transition-transform duration-700 ease-in-out ${
-                        isLoginFormOpen ? 'translate-x-40' : isUserFormOpen ? '-translate-x-96' : ''
-                    }`}
-                >
-                    <div className="w-[10vw] h-[25vh] bg-red-700 rounded-xl"></div>
-                    <div className="w-[10vw] h-[25vh] bg-yellow-700 rounded-3xl"></div>
-                    <div className="w-[10vw] h-[25vh] bg-blue-400 rounded-xl"></div>
-                    <div className="w-[10vw] h-[25vh] bg-green-400 rounded-xl"></div>
-                </div>
-            </div>
+            {/* Contêiner central para os formulários */}
+            <div className="flex items-center justify-center mt-24 lg:mt-10">
+                {/* Renderização Condicional de Mobile ou Desktop */}
+                <MobileScreen
+                    isLoginFormOpen={isLoginFormOpen}
+                    isUserFormOpen={isUserFormOpen}
+                    isOngFormOpen={isOngFormOpen}
+                    isRecoveryPasswordOpen={isRecoveryPasswordOpen}
+                    openUserForm={openUserForm}
+                    openLoginForm={openLoginForm}
+                    openOngForm={openOngForm}
+                    openRecoveryForm={openRecoveryForm}
+                    closeForms={closeForms}
+                />
 
-            {/* Formulários com Transição de Animação para Mobile */}
-            <div className="lg:hidden w-full h-full flex items-center justify-center relative">
-                
-                {/* Login Form com Transição Vertical no Mobile */}
-                <div
-                    className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all transform duration-500 ease-in-out ${
-                        isLoginFormOpen ? 'translate-y-0 opacity-100 scale-100' : '-translate-y-full opacity-0 pointer-events-none'
-                    }`}
-                >
-                    <LoginForm isOpen={isLoginFormOpen} onClose={closeForms} openUserForm={openUserForm} />
-                </div>
-
-                {/* User Form com Transição Vertical no Mobile */}
-                <div
-                    className={`absolute top-0 left-0 w-full h-full flex items-center justify-center transition-all transform duration-500 ease-in-out ${
-                        isUserFormOpen ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-full opacity-0 pointer-events-none'
-                    }`}
-                >
-                    <UserForm isOpen={isUserFormOpen} onClose={closeForms} openLoginForm={openLoginForm} />
-                </div>
+                <DesktopScreen
+                    isLoginFormOpen={isLoginFormOpen}
+                    isUserFormOpen={isUserFormOpen}
+                    isOngFormOpen={isOngFormOpen}
+                    isRecoveryPasswordOpen={isRecoveryPasswordOpen}
+                    openUserForm={openUserForm}
+                    openLoginForm={openLoginForm}
+                    openOngForm={openOngForm}
+                    openRecoveryForm={openRecoveryForm}
+                    closeForms={closeForms}
+                />
             </div>
-
-            {/* Login Form com Transição Horizontal para Desktop */}
-            <div
-                className={`absolute top-0 left-0 w-full h-full hidden lg:flex items-center justify-center transition-all transform duration-500 ease-in-out ${
-                    isLoginFormOpen ? '-translate-x-80 opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-                }`}
-            >
-                <LoginForm isOpen={isLoginFormOpen} onClose={closeForms} openUserForm={openUserForm} />
-            </div>
-
-            {/* User Form com Transição Horizontal para Desktop */}
-            <div
-                className={`absolute top-0 left-0 w-full h-full hidden lg:flex items-center justify-center transition-all transform duration-500 ease-in-out ${
-                    isUserFormOpen ? 'translate-x-20 opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
-                }`}
-            >
-                <UserForm isOpen={isUserFormOpen} onClose={closeForms} openLoginForm={openLoginForm} />
-            </div>
+            <Footer />
         </div>
     );
 }
