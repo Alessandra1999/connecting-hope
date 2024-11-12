@@ -4,7 +4,7 @@ export function InfoTextCards({ content }) {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
 
   return (
-    <div className="px-16 mt-10" id="tabs">
+    <div className="h-full flex flex-col" id="tabs">
       <div className="flex gap-2">
         {content.map((tab, index) => (
           <button
@@ -19,8 +19,8 @@ export function InfoTextCards({ content }) {
         ))}
       </div>
       <div
-        className="bg-primary-light-200 text-justify rounded-b-lg p-6"
         id="tab-content"
+        className="bg-primary-light-200 text-justify rounded-b-lg p-6 h-full"
       >
         <div>{content[activeContentIndex].body}</div>
       </div>
