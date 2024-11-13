@@ -1,5 +1,6 @@
 package com.hope.api_hope.controller;
 
+import com.hope.api_hope.dto.OngDTO;
 import com.hope.api_hope.dto.UserDTO;
 import com.hope.api_hope.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,18 @@ public class UserController {
         UserDTO userDTO = service.getUserById(id);
 
         return userDTO != null ? ResponseEntity.ok(userDTO) : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/{id}/nonProfit")
+    public ResponseEntity<OngDTO> getUserOngById(@PathVariable Long id){
+       OngDTO ongDTO = service.getUserOngById(id);
+
+        return ongDTO != null ? ResponseEntity.ok(ongDTO) : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/{name}")
+    public List<OngDTO> getUserOngByName(@PathVariable String name){
+        return service.getAllOngsByName(name);
     }
 
     @PostMapping
