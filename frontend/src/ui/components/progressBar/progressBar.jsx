@@ -11,7 +11,7 @@ export function ProgressBar({ progress, totalBars }) {
         return (
           <div
             key={`bar-${idx}`}
-            className={`rounded-lg bg-primary-dark-500 ${bgOpacity}`}
+            className={`rounded-lg bg-primary-dark-500 dark:bg-primary-light-450 ${bgOpacity}`}
           />
         );
       })}

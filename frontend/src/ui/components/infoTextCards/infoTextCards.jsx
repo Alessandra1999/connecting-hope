@@ -9,7 +9,7 @@ export function InfoTextCards({ content }) {
         {content.map((tab, index) => (
           <button
             key={tab.label}
-            className={`bg-primary-light-200 rounded-t-xl w-1/3 p-3 ${
+            className={`bg-primary-light-200 rounded-t-xl w-1/3 p-3 dark:bg-primary-dark-500 dark:bg-opacity-75 dark:text-white ${
               activeContentIndex === index ? 'active' : 'mb-2'
             }`}
             onClick={() => setActiveContentIndex(index)}
@@ -20,7 +20,7 @@ export function InfoTextCards({ content }) {
       </div>
       <div
         id="tab-content"
-        className="bg-primary-light-200 text-justify rounded-b-lg p-6 h-full"
+        className="bg-primary-light-200 text-justify rounded-b-lg p-6 h-full dark:bg-primary-dark-500 dark:bg-opacity-75 dark:text-white"
       >
         <div>{content[activeContentIndex].body}</div>
       </div>
