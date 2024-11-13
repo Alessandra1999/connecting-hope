@@ -4,7 +4,7 @@ export function PrivacyPolicy() {
       <div className="max-w-[80%] mx-auto py-8 h-full flex flex-col items-center justify-center gap-4 md:max-w-screen-sm xl:max-w-screen-lg">
         <div className="text-center text-sm font-bold lg:text-3xl">
           <h1>Política de Privacidade - Connecting Hope</h1>
-          <h2>Última Atualização: 17/10/24</h2>
+          <h2>Última Atualização: 13/11/24</h2>
         </div>
 
         <div className="text-xs flex flex-col gap-4 md:text-base lg:text-xl">
@@ -34,7 +34,7 @@ export function PrivacyPolicy() {
               endereço físico. Informações de Pagamento: Dados necessários para
               processar doações, como número de cartão de crédito ou conta
               bancária. Essas informações são tratadas diretamente pelo
-              processador de pagamentos PayPal e não são armazenadas por nós.
+              processador de pagamentos Stripe e não são armazenadas por nós.
               Outros Dados: Informações que você escolhe fornecer
               voluntariamente, como feedbacks ou perguntas.
             </p>

@@ -1,6 +1,6 @@
 import { Button } from '@material-tailwind/react';
 import { useMemo } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import { ProgressBar } from '../../../components';
 
 export function CampaignProgressCard({ campaign }) {
@@ -19,10 +19,17 @@ export function CampaignProgressCard({ campaign }) {
     });
   }
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/donation-form")
+  }
+
   return (
     <div className="h-full flex flex-col gap-4">
       <div className=" w-full">
-        <Button className="w-full bg-primary-light-700 font-bold text-2xl">
+        <Button className="w-full bg-primary-light-700 font-bold text-2xl"
+        onClick={handleNavigate}>
           DOE AGORA
         </Button>
       </div>

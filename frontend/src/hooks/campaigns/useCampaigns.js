@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../api';
+import { BASE_URL } from '../../api/apiService';
 import { useEffect, useState } from 'react';
 
 export function useCampaigns() {

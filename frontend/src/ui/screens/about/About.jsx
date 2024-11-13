@@ -1,7 +1,7 @@
 import Slider from "../../components/slider/slider";
 import Charity from "../../../assets/images/generics/charity.png";
 
-function About() {
+export function About() {
   return (
     <div className="min-h-screen flex flex-col max-w-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:from-primary-dark-250 dark:to-primary-dark-500">
       <div className="w-full">
@@ -55,5 +55,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
