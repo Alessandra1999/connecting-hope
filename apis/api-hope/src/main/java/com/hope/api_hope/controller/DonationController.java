@@ -1,5 +1,6 @@
 package com.hope.api_hope.controller;
 
+import com.hope.api_hope.controller.request.PaymentIntentRequest;
 import com.hope.api_hope.dto.response.DonationResponse;
 import com.hope.api_hope.service.GetDonationService;
 import com.hope.api_hope.service.StripeService;
@@ -39,10 +40,15 @@ public class DonationController {
     }
 
     @PostMapping("/create-payment-intent")
-    public PaymentIntent createPaymentIntent(@RequestParam double amount,
-                                             @RequestParam String connectedAccountId,
-                                             @RequestParam(required = false) List<String> paymentMethodTypes) throws StripeException {
-        System.out.println("Valor recebido no backend: " + amount);
-        return stripeService.createPaymentIntent(amount, connectedAccountId, paymentMethodTypes);
+    public PaymentIntent createPaymentIntent(@RequestBody PaymentIntentRequest request) throws StripeException {
+        long amountInCents = request.getAmountInCents();
+        String connectedAccountId = request.getConnectedAccountId();
+        List<String> paymentMethodTypes = request.getPaymentMethodTypes();
+
+        System.out.println("Valor recebido no backend: " + amountInCents);
+        System.out.println("AccountId recebido no backend: " + connectedAccountId);
+        System.out.println("Método de pagamento recebido no backend: " + paymentMethodTypes);
+
+        return stripeService.createPaymentIntent(amountInCents, connectedAccountId, paymentMethodTypes);
     }
 }

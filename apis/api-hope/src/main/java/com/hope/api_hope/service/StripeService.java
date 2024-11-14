@@ -48,11 +48,11 @@ public class StripeService {
         return accountLink.getUrl();
     }
 
-    public PaymentIntent createPaymentIntent(double amount, String connectedAccountId, List<String> paymentMethodTypes) throws StripeException {
+    public PaymentIntent createPaymentIntent(long amountInCents, String connectedAccountId, List<String> paymentMethodTypes) throws StripeException {
         List<String> methodTypes = new ArrayList<>(paymentMethodTypes != null ? paymentMethodTypes : List.of("card"));
 
         PaymentIntentCreateParams params = PaymentIntentCreateParams.builder()
-                .setAmount((long) (amount * 100))
+                .setAmount((long) (amountInCents * 100))
                 .setCurrency("brl")
                 .addAllPaymentMethodType(methodTypes)
                 .setTransferData(
