@@ -34,18 +34,18 @@ export function CampaignProgressCard({ campaign }) {
         </Button>
       </div>
       <div className="h-full w-full">
-        <div className="h-full w-full rounded-lg bg-primary-light-400 py-6 px-4 drop-shadow-md">
+        <div className="h-full w-full rounded-lg bg-primary-light-400 py-6 px-4 drop-shadow-md dark:bg-primary-dark-500 dark:bg-opacity-75">
           <ProgressBar progress={campaignProgress} totalBars={20} />
-          <div className="py-4 font-bold text-sm text-primary-dark-750">
+          <div className="py-4 font-bold text-sm text-primary-dark-750 dark:text-white">
             {'Arrecadado: '}
           </div>
-          <div className="font-bold text-3xl text-center text-primary-dark-750">
+          <div className="font-bold text-3xl text-center text-primary-dark-750 dark:text-white">
             {getFormattedCurrency(campaign.fundsCurrent)}
           </div>
-          <div className="py-4 font-bold text-sm text-primary-dark-500">
+          <div className="py-4 font-bold text-sm text-primary-dark-500 dark:text-primary-light-550">
             {' Meta: '}
           </div>
-          <div className="font-bold text-3xl text-center text-primary-dark-500">
+          <div className="font-bold text-3xl text-center text-primary-dark-500 dark:text-primary-light-550">
             {getFormattedCurrency(campaign.fundsGoal)}
           </div>
         </div>

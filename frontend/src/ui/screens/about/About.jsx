@@ -1,5 +1,5 @@
-import Slider from "../../components/slider/slider";
-import Charity from "../../../assets/images/generics/charity.png";
+import Slider from '../../components/slider/slider';
+import Charity from '../../../assets/images/generics/charity.png';
 
 export function About() {
   return (

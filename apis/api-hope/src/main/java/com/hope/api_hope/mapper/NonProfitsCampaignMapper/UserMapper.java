@@ -1,6 +1,8 @@
 package com.hope.api_hope.mapper.NonProfitsCampaignMapper;
 
+import com.hope.api_hope.dto.OngDTO;
 import com.hope.api_hope.dto.UserDTO;
+import com.hope.api_hope.model.NonProfits;
 import com.hope.api_hope.model.User;
 
 public class UserMapper {
@@ -26,6 +28,17 @@ public class UserMapper {
         userDTO.setPasswordUser(user.getPassword());
 
         return userDTO;
+    }
 
+    public static OngDTO toOngDto(NonProfits nonProfits) {
+        OngDTO ongDTO = new OngDTO();
+        ongDTO.setNameNonprofit(nonProfits.getNameNonProfit());
+        ongDTO.setIdNonProfit(Math.toIntExact(nonProfits.getId()));
+        ongDTO.setCnpjNonprofit(nonProfits.getCnpjNonprofit());
+        ongDTO.setEmailNonprofit(nonProfits.getEmailNonprofit());
+        ongDTO.setPhotoNonprofit(nonProfits.getPhotoNonProfit());
+        ongDTO.setAddressNonprofit(nonProfits.getAddressNonprofit());
+
+        return ongDTO;
     }
 }
