@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaUser } from 'react-icons/fa6';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import logo from '../../../assets/logo.svg';
+import logo from '../../../assets/LOGO.svg';
 import searchIcon from '../../../assets/images/navbar/Group.png';
 import { Switcher } from '../../../utils';
 
@@ -40,7 +40,7 @@ export function Navbar() {
   >
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center dark:invert">
           <img src={logo} alt="Logo" width="50px" />
         </div>
 

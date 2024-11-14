@@ -8,9 +8,10 @@ import mainHeroImage from "../../../assets/images/home/main-hero.jpg";
 import peoplesWithHeart from "../../../assets/images/home/peoples-with-heart.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-// import { CampaignsCard } from "../../components/campaigns-card";
 import NonProfitsCard from "../../components/campaigns-card/NonProfitsCard";
 import NonProfitsComment from "../../components/campaigns-card/NonProfitsComment";
+import { Footer } from '../../components/footer/footer';
+import { SliderHome } from '../../components/slider/SliderHome';
 
 export function Home() {
 
@@ -71,9 +72,10 @@ export function Home() {
 
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 text-xs">
-      <Navbar />
-
+    <div className="w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:bg-gradient-to-b dark:from-primary-dark-250 dark:to-primary-dark-400 text-xs">
+      <div className='py-10'>
+        <Navbar />
+      </div>
       <div>
         <div className="relative max-h-screen h-full">
           <div className="max-w-[26vw] w-full h-[22vh] md:max-w-[24vw] md:h-[28vh] lg:max-w-[24vw] lg:h-[30vh] xl:max-w-[14vw] xl:h-[36vh] absolute top-0 left-5 lg:left-12">
@@ -93,7 +95,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col h-max-without-navbar items-center justify-center bg-gradient-to-bl from-primary-light-200 from-60% to-primary-light-550 text-primary-light-750 dark:text-white px-4 lg:px-4">
+        <div className="flex flex-col h-max-without-navbar items-center justify-center bg-gradient-to-bl from-primary-light-200 from-60% to-primary-light-550 text-primary-light-750 dark:bg-gradient-to-bl dark:from-primary-dark-250 from-60% dark:to-primary-dark-400 dark:text-white px-4 lg:px-4">
           <div className="max-w-32 max-h-32 md:max-w-48 md:max-h-48 lg:max-w-64 lg:max-h-64 xl:max-w-80 xl:max-h-80 w-full h-full rounded-full">
             <img
               src={mainHeroImage}
@@ -102,11 +104,11 @@ export function Home() {
             />
           </div>
 
-          <div className="max-w-72 max-h-8 w-full h-full mt-6 px-2 flex items-center justify-center rounded-full border border-primary-750 md:max-h-10 md:max-w-sm lg:max-h-12 lg:max-w-xl xl:max-h-14">
+          <div className="max-w-72 max-h-8 w-full h-full mt-6 px-2 flex items-center justify-center rounded-full border border-[#1E1E1E] dark:border-white md:max-h-10 md:max-w-sm lg:max-h-12 lg:max-w-xl xl:max-h-14">
             <input
               type="text"
               placeholder="Encontre ONGs por nome ou categoria"
-              className="w-[100%] h-full p-2 bg-transparent rounded-full placeholder:text-primary-light-750 focus:outline-none md:text-base lg:text-lg xl:text-xl"
+              className="w-[100%] h-full p-2 bg-transparent rounded-full placeholder:text-primary-light-750 dark:placeholder:text-white focus:outline-none md:text-base lg:text-lg xl:text-xl"
             />
 
             <button className="p-2 md:p-3 lg:p-4 xl:p-5">
@@ -148,6 +150,7 @@ export function Home() {
         </div>
       </div>
 
+      <SliderHome/>
 
       <div className="max-w-5xl p-6 mx-auto flex flex-col lg:flex-row items-center justify-center gap-1 lg:gap-6">
         <img
@@ -156,7 +159,7 @@ export function Home() {
           alt="Pessoas segurando um pequeno coração da cor branco"
         />
 
-        <div className="text-center lg:text-left lg:w-2/2">
+        <div className="text-center lg:text-left lg:w-2/2 dark:text-white">
           <h2 className="font-bold text-2xl lg:text-5xl">Campanhas Em Destaque</h2>
           <div className="max-w-full lg:max-w-3xl mt-3">
             <p className="text-sm font-medium lg:text-2xl">
@@ -167,7 +170,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="mx-auto py-8 rounded-2xl bg-gradient-to-br from-white to-primary-light-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
+      <div className="mx-auto py-8 rounded-2xl bg-gradient-to-br from-white to-primary-light-100 dark:bg-gradient-to-br dark:from-[#3C5183] dark:to-[#303881] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-2">
         {campaignsMock.map((campaignData, index) => (
           <div key={index} className="flex flex-col items-center">
             <NonProfitsCard campaign={campaignData} />
@@ -175,7 +178,7 @@ export function Home() {
           </div>
         ))}
       </div>
-
+      <Footer />
     </div>
   );
 }

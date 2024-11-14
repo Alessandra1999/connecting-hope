@@ -13,6 +13,10 @@ module.exports = withMT({
       sans: ["Montserrat", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        'radial-light': 'radial-gradient(circle, #89A7B1, #566981)',
+        'radial-dark': 'radial-gradient(circle, #34344E, #3E77C0)',
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'scale(0.95)' },

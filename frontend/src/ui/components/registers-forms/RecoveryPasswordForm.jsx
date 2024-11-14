@@ -11,13 +11,13 @@ export const RecoveryPasswordForm = ({ isOpen, onClose, openLoginForm, openUserF
                 background: "linear-gradient(to bottom right, rgba(86, 105, 129, 0.8) 60%, rgba(203, 218, 213, 0.1) 90%)"
             }}
         >
-            <div className="w-full text-left space-y-4 text-[#1E1E1E] dark:text-white">
-                <p className="block text-2xl font-semibold">
+            <div className="w-full text-left space-y-4 text-[#1E1E1E]">
+                <p className="block text-2xl font-semibold dark:text-white">
                     Recuperação de senha
                 </p>
 
                 <div>
-                    <label className="block text-sm font-semibold">Email:</label>
+                    <label className="block text-sm font-semibold dark:text-white">Email:</label>
                     <input
                         type="text"
                         placeholder="Nome Fantasia"
@@ -25,7 +25,7 @@ export const RecoveryPasswordForm = ({ isOpen, onClose, openLoginForm, openUserF
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">Senha:</label>
+                    <label className="block text-sm font-semibold dark:text-white">Senha:</label>
                     <input
                         type="password"
                         value={isPassword}
@@ -34,7 +34,7 @@ export const RecoveryPasswordForm = ({ isOpen, onClose, openLoginForm, openUserF
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-semibold">Confirma sua senha:</label>
+                    <label className="block text-sm font-semibold dark:text-white">Confirme sua senha:</label>
                     <input
                         type="password"
                         value={isPassword}

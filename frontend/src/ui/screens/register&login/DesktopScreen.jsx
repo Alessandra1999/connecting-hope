@@ -11,16 +11,16 @@ export const DesktopScreen = ({ isLoginFormOpen, isUserFormOpen, isOngFormOpen, 
                     ${isLoginFormOpen ? 'translate-x-40' : isUserFormOpen ? '-translate-x-80' : isOngFormOpen ? '-translate-x-80' : isRecoveryPasswordOpen ? 'translate-x-40' : ''
                     }`}
             >
-                <div className="w-[10vw] h-[25vh] bg-red-700 rounded-xl"></div>
-                <div className="w-[10vw] h-[25vh] bg-yellow-700 rounded-3xl"></div>
-                <div className="w-[10vw] h-[25vh] bg-blue-400 rounded-xl"></div>
-                <div className="w-[10vw] h-[25vh] bg-green-400 rounded-xl"></div>
+                <div className="w-[10vw] h-[25vh] rounded-xl bg-radial-light dark:bg-radial-dark"></div>
+                <div className="w-[10vw] h-[25vh] rounded-3xl bg-radial-light dark:bg-radial-dark"></div>
+                <div className="w-[10vw] h-[25vh] rounded-xl bg-radial-light dark:bg-radial-dark"></div>
+                <div className="w-[10vw] h-[25vh] rounded-xl bg-radial-light dark:bg-radial-dark"></div>
             </div>
         </div>
 
         {/* Login Form com Transição Horizontal para Desktop */}
         <div
-            className={`absolute top-0 left-0 w-full h-full hidden lg:flex items-center justify-center transition-all transform duration-500 ease-in-out 
+            className={`absolute top-0 left-10 w-full h-full hidden lg:flex items-center justify-center transition-all transform duration-500 ease-in-out 
                 ${isLoginFormOpen ? '-translate-x-80 opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}
         >
@@ -47,7 +47,7 @@ export const DesktopScreen = ({ isLoginFormOpen, isUserFormOpen, isOngFormOpen, 
 
         {/* Recovery Form com Transição Horizontal para Desktop */}
         <div
-            className={`absolute top-0 left-0 w-full h-full hidden lg:flex items-center justify-center transition-all transform duration-500 ease-in-out 
+            className={`absolute top-0 left-12 w-full h-full hidden lg:flex items-center justify-center transition-all transform duration-500 ease-in-out 
                 ${isRecoveryPasswordOpen ? '-translate-x-80 opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                 }`}
         >

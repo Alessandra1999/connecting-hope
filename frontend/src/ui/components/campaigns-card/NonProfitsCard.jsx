@@ -6,7 +6,7 @@ import imageCard from '../../../assets/images/home/imageCard.png'
 const NonProfitsCard = ({ campaign }) => {
     return (
         <div className="flex justify-center p-1">
-            <div className="w-full max-w-xs sm:max-w-sm rounded-3xl shadow-lg mt-10 p-4 bg-gradient-to-b from-primary-light-300 to-primary-light-500 relative">
+            <div className="w-full max-w-xs sm:max-w-sm rounded-3xl shadow-lg mt-10 p-4 bg-gradient-to-b from-primary-light-300 to-primary-light-500 dark:bg-gradient-to-b dark:from-[#566981] dark:to-[#3A4A5F] relative">
                 <div className="flex justify-center mb-4">
                     <img
                         src={imageCard}
@@ -17,11 +17,11 @@ const NonProfitsCard = ({ campaign }) => {
 
                 <div className="flex justify-between items-start">
                     <div className="text-left mb-1 w-2/2 pr-2">
-                        <h2 className="text-sm font-semibold mb-1 line-clamp-1">{campaign.title}</h2>
-                        <p className="text-sm line-clamp-3">{campaign.description}</p>
+                        <h2 className="text-sm font-semibold mb-1 line-clamp-1 dark:text-white">{campaign.title}</h2>
+                        <p className="text-sm line-clamp-3 dark:text-gray-400">{campaign.description}</p>
                     </div>
 
-                    <div className="flex flex-col items-end text-right w-1/2 pl-2">
+                    <div className="flex flex-col items-end text-right w-1/2 pl-2 dark:text-white">
                         <div className="flex items-center mb-1">
                             <span className="text-sm font-bold">{campaign.countOfLikes}</span>
                             <FaHeart className="ml-2 text-xs" />
@@ -29,7 +29,7 @@ const NonProfitsCard = ({ campaign }) => {
 
                         <p className="whitespace-nowrap text-sm">Expira em: {campaign.expiresIn}</p>
 
-                        <button className="bg-primary-light-700 text-xs text-white px-3 py-1 rounded-lg flex items-center justify-center mt-2">
+                        <button className="bg-primary-light-700 text-xs text-white px-3 py-1 dark:bg-primary-dark-700 rounded-lg flex items-center justify-center mt-2">
                             Saiba mais
                             <FaChevronRight className="ml-2" />
                         </button>

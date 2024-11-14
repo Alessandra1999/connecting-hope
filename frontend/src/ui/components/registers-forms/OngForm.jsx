@@ -104,7 +104,7 @@ const OngForm = ({ openLoginForm }) => {
             </div>
 
             <div className="relative w-full">
-                <button className="flex items-center justify-center w-full hover:bg-gray-300 py-3 bg-white rounded-xl font-semibold">
+                <button className="flex items-center justify-center text-[#1E1E1E] w-full hover:bg-gray-300 py-3 bg-white rounded-xl font-semibold">
                     <FcGoogle className="absolute left-4 w-6 h-6" />
                     <span>Continue com o Google</span>
                 </button>
