@@ -9,10 +9,19 @@ import {
 import { useCampaigns } from '../../../hooks';
 
 import { CampaignProgressCard, CampaignShare } from './components';
+import { useParams } from 'react-router-dom/cjs/react-router-dom';
 
-export function ShowCampaign({ campaignId }) {
-  const { getCampaign } = useCampaigns();
-  const [campaign, setCampaign] = useState(null);
+export function ShowCampaign() {
+  const { campaignId } = useParams();
+  const { campaigns } = useCampaigns();
+
+  const campaign = useMemo(() => {
+    if (!campaigns) {
+      return null;
+    }
+
+    return campaigns.find(({ id }) => id === Number(campaignId));
+  }, [campaigns]);
 
   const campaignLink = `http://localhost:5173/campaign/${campaignId}`;
   const campaignContent = useMemo(() => {
@@ -28,15 +37,13 @@ export function ShowCampaign({ campaignId }) {
     ];
   }, [campaign]);
 
-  useEffect(() => {
-    getCampaign({ campaignId }).then((data) => setCampaign(data));
-  }, [campaignId, getCampaign]);
-
   if (!campaign) {
     return (
-      <Button variant="outlined" loading={true}>
-        Loading
-      </Button>
+      <div className="h-screen flex justify-center items-center">
+        <Button variant="outlined" loading={true}>
+          Loading...
+        </Button>
+      </div>
     );
   }
 
