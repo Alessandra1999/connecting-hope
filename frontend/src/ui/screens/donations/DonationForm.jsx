@@ -3,7 +3,7 @@ import { Button } from "@material-tailwind/react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { createPaymentIntent } from "../../../api/apiService";
+import { createPaymentIntent } from "../../../api/api";
 
 export function DonationForm() {
   const stripe = useStripe();

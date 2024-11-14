@@ -48,7 +48,7 @@ public class StripeService {
         return accountLink.getUrl();
     }
 
-    public PaymentIntent createDonation(double amount, String connectedAccountId, List<String> paymentMethodTypes) throws StripeException {
+    public PaymentIntent createPaymentIntent(double amount, String connectedAccountId, List<String> paymentMethodTypes) throws StripeException {
         List<String> methodTypes = new ArrayList<>(paymentMethodTypes != null ? paymentMethodTypes : List.of("card"));
 
         PaymentIntentCreateParams params = PaymentIntentCreateParams.builder()

@@ -28,7 +28,7 @@ public class DonationController {
         return getDonationService.list(pageable);
     }
 
-    @PostMapping("/create-account")
+    @PostMapping("/create-connected-account")
     public Account createConnectedAccount(@RequestParam String email) throws StripeException {
         return stripeService.createConnectedAccount(email);
     }
@@ -39,10 +39,10 @@ public class DonationController {
     }
 
     @PostMapping("/create-payment-intent")
-    public PaymentIntent donate(@RequestParam double amount,
-                                @RequestParam String connectedAccountId,
-                                @RequestParam(required = false) List<String> paymentMethodTypes) throws StripeException {
+    public PaymentIntent createPaymentIntent(@RequestParam double amount,
+                                             @RequestParam String connectedAccountId,
+                                             @RequestParam(required = false) List<String> paymentMethodTypes) throws StripeException {
         System.out.println("Valor recebido no backend: " + amount);
-        return stripeService.createDonation(amount, connectedAccountId, paymentMethodTypes);
+        return stripeService.createPaymentIntent(amount, connectedAccountId, paymentMethodTypes);
     }
 }
