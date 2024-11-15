@@ -3,8 +3,8 @@ import { Button } from '@material-tailwind/react';
 export function NonprofitsKnowMore() {
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col p-4 rounded-3xl justify-center border-opacity-75 border-primary-dark-650 bg-primary-light-450 border-8 gap-4">
-        <div className="mx-auto rounded-lg text-primary-dark-750 w-60 text-center bg-primary-light-200 font-bold text-xl p-2">
+      <div className="flex flex-col p-4 rounded-3xl justify-center border-opacity-75 border-primary-dark-650 bg-primary-light-450 border-8 gap-4 dark:border-white dark:border-opacity-20 dark:bg-primary-dark-100 dark:bg-opacity-20">
+        <div className="mx-auto rounded-lg text-primary-dark-750 w-60 text-center bg-primary-light-200 font-bold text-xl p-2 dark:bg-primary-dark-700 dark:text-white">
           ONG Cachorrinho
           {/* {nonProfitsId.name} */}
         </div>
@@ -15,7 +15,7 @@ export function NonprofitsKnowMore() {
           ></img>
         </div>
         <div className="flex justify-center">
-          <Button className="bg-primary-light-700 font-bold text-xl w-60">
+          <Button className="bg-primary-light-700 font-bold text-xl w-60 dark:bg-primary-light-700">
             Saiba mais
           </Button>
         </div>
