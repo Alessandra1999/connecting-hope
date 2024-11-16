@@ -1,5 +1,5 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
-import Background from "../../../assets/images/sliderBackground.png";
+import Background from "../../../assets/images/generics/sliderBackground.png";
 import BoxOfFood from "../../../assets/images/sliderHome/boxOfFood.jpg";
 import Medicine from "../../../assets/images/sliderHome/medicine.jpg";
 import PeopleSharing from "../../../assets/images/sliderHome/peopleSharing.jpg";

@@ -1,7 +1,5 @@
 import axios from "axios";
 
-export const BASE_URL = "http://localhost:3306"; // veririfcar qual a porta correta
-
 const API_URL = "http://localhost:8080"; //verificar
 
 export const createPaymentIntent = async (amount, paymentMethodType, connectedAccountId) => {

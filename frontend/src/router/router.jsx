@@ -1,24 +1,18 @@
-import { Route, Switch } from 'react-router-dom';
-
-import { Profile, ShowCampaign, About } from '../ui/screens';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ShowCampaign, About, HomeNotLogged, Home, InitialScreen, PrivacyPolicy, TermsOfUse } from "../ui/screens";
 
 export function AppRouter() {
   return (
-    <div className="container bg-gradient-to-b from-primary-light-250 to-primary-light-400">
-      <Switch>
-        <Route path="/login">LOGIN</Route>
-        <Route path="/home">HOME</Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
-        <Route path="/campaign/:campaignId">
-          <ShowCampaign />
-        </Route>
-        <Route path="/">PUBLIC HOME</Route>Í
-      </Switch>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeNotLogged />} />
+        <Route path="/home" element={<Home />}/>
+        <Route path="/login" element={<InitialScreen />}/>
+        <Route path="/about" element={<About />} />
+        <Route path="/campaign/:campaignId" element={<ShowCampaign />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+    </Router>
   );
 }
