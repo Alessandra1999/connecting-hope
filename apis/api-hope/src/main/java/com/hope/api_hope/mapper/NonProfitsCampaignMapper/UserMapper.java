@@ -25,7 +25,6 @@ public class UserMapper {
         userDTO.setAddressUser(user.getAddressUser());
         userDTO.setEmailUser(user.getEmail());
         userDTO.setNameUser(user.getNameUser());
-        userDTO.setPasswordUser(user.getPassword());
 
         return userDTO;
     }

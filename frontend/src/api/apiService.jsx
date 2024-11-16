@@ -71,3 +71,14 @@ export const createUser = async (data) => {
     throw error;
   }
 }
+
+//Login
+export const userLogin = async (data) => {
+  try {
+    const response = await axios.post(`${API_URL}/login`);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao fazer login:", error);
+    throw error;
+  }
+}

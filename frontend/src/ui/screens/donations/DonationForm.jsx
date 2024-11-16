@@ -3,7 +3,7 @@ import { Button } from "@material-tailwind/react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { createPaymentIntent } from "../../../api/api";
+import { createPaymentIntent } from "../../../api/apiService";
 
 export function DonationForm() {
   const stripe = useStripe();
@@ -22,7 +22,10 @@ export function DonationForm() {
     }
 
     try {
-      const { clientSecret, nextActionUrl } = await createPaymentIntent(amount, paymentMethodType);
+      const { clientSecret, nextActionUrl } = await createPaymentIntent(
+        amount,
+        paymentMethodType
+      );
 
       if (paymentMethodType === "card") {
         const cardElement = elements.getElement(CardElement);
@@ -49,7 +52,10 @@ export function DonationForm() {
 
   return (
     <div className="min-h-screen flex flex-col max-w-full items-center bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:from-primary-dark-250 dark:to-primary-dark-500">
-      <form onSubmit={handleSubmit} className="h-auto w-4/5 flex flex-col items-center justify-center text-center mt-8 bg-primary-light-450 border-opacity-75 border-primary-dark-650 border-8 gap-8 rounded-3xl">
+      <form
+        onSubmit={handleSubmit}
+        className="h-auto w-4/5 flex flex-col items-center justify-center text-center mt-8 bg-primary-light-450 border-opacity-75 border-primary-dark-650 border-8 gap-8 rounded-3xl"
+      >
         <div className="mx-auto rounded-lg text-primary-light-750 dark:text-primary-dark-50 w-auto text-center font-bold text-5xl mt-4 mb-6">
           Faça sua Doação
         </div>
@@ -64,7 +70,7 @@ export function DonationForm() {
             required
           />
         </label>
-      
+
         <label className="text-2xl flex flex-col font-sans font-bold text-primary-light-750 dark:text-primary-dark-50">
           Método de Pagamento:
           <select
@@ -83,7 +89,11 @@ export function DonationForm() {
             <CardElement
               options={{
                 style: {
-                  base: { fontSize: "16px", color: "#32325d", "::placeholder": { color: "#a0aec0" }},
+                  base: {
+                    fontSize: "16px",
+                    color: "#32325d",
+                    "::placeholder": { color: "#a0aec0" },
+                  },
                   invalid: { color: "#fa755a" },
                 },
               }}
@@ -106,7 +116,11 @@ export function DonationForm() {
           </div>
         )}
 
-        <Button className="w-1/3 md:w-1/6 text-md md:text-lg justify-center bg-primary-light-700 dark:bg-primary-dark-700 text-primary-light-50 font-bold" type="submit" disabled={!stripe}>
+        <Button
+          className="w-1/3 md:w-1/6 text-md md:text-lg justify-center bg-primary-light-700 dark:bg-primary-dark-700 text-primary-light-50 font-bold"
+          type="submit"
+          disabled={!stripe}
+        >
           Doar
         </Button>
         <ToastContainer position="top-right" autoClose={3000} />

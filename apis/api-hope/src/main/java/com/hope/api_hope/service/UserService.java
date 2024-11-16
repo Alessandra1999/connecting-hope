@@ -100,7 +100,6 @@ public class UserService {
         user.setNameUser(userDTO.getNameUser());
         user.setPhotoUser(userDTO.getPhotoUser());
         user.setEmail(userDTO.getEmailUser());
-        user.setPassword(userDTO.getPasswordUser());
         user.setAddressUser(userDTO.getAddressUser());
 
         return userDTO;

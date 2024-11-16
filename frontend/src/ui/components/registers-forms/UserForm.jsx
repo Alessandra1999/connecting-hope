@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { createUser } from "../../../api/api";
+import { createUser } from "../../../api/apiService";
 
 const registerFormSchema = z.object({
   nameUser: z.string(),
@@ -29,11 +29,11 @@ const UserForm = ({ openLoginForm }) => {
 
   async function onUserRegisterFormSubmit(data) {
     try {
-        const user = await createUser(data)
-        toast.success("Usuário criado com sucesso!")
-    } catch(error) {
-        toast.error("Ocorreu algum erro, verifique os dados e tente novamente")
-        console.log(error)
+      const user = await createUser(data);
+      toast.success("Usuário criado com sucesso!");
+    } catch (error) {
+      toast.error("Ocorreu algum erro, verifique os dados e tente novamente");
+      console.log(error);
     }
   }
 
@@ -127,7 +127,10 @@ const UserForm = ({ openLoginForm }) => {
             Entrar
           </button>
 
-          <button type="submit" className="w-full mt-4 py-3 bg-[#13485A] hover:bg-[#0d313d] text-[#fff] rounded-xl font-semibold">
+          <button
+            type="submit"
+            className="w-full mt-4 py-3 bg-[#13485A] hover:bg-[#0d313d] text-[#fff] rounded-xl font-semibold"
+          >
             Registre-se
           </button>
         </div>
