@@ -66,7 +66,7 @@ const UserForm = ({openLoginForm}) => {
             <div className="flex items-center mt-4">
                 <input type="checkbox" className="mr-2" />
                 <span className="text-sm font-bold text-[#1E1E1E] dark:text-white">
-                    Concordo com os <a href="#" className="underline">Termos de Uso</a> e as <a href="#" className="underline">Políticas de Privacidade</a>
+                    Concordo com os <a href="/terms-of-use" className="underline">Termos de Uso</a> e as <a href="/privacy-policy" className="underline">Políticas de Privacidade</a>
                 </span>
             </div>
 

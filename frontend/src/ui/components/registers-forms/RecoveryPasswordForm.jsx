@@ -3,7 +3,7 @@ import { FaCamera, FaUser } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 export const RecoveryPasswordForm = ({ isOpen, onClose, openLoginForm, openUserForm }) => {
-    const [isPassword, seIsPassword] = useState('');
+    const [isPassword, setIsPassword] = useState('');
 
     return (
         <div className="flex flex-col items-center p-6 rounded-3xl shadow-2xl w-full max-w-[86vw] sm:max-w-sm mx-auto"
