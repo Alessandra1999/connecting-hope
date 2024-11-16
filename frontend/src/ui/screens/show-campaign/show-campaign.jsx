@@ -1,6 +1,5 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Button } from '@material-tailwind/react';
-
 import {
   CarouselDefault,
   InfoTextCards,
