@@ -1,18 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Home } from './ui/screens/home';
-import { HomeNotLogged } from './ui/screens/HomeNotLogged';
-import { InitialScreen } from './ui/screens/register&login';
+import { BrowserRouter } from 'react-router-dom';
+import { Navbar } from './ui/components/navbar';
+import { Router } from './router';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<InitialScreen />} />
-        <Route path="/homeNotLogged" element={<HomeNotLogged />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+      <Navbar />
+      <div className="bg-gradient-to-b from-primary-light-250 to-primary-light-400 min-h-screen dark:from-primary-dark-250 dark:to-primary-dark-500">
+        <Router />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { FaUser } from 'react-icons/fa6';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import logo from '../../../assets/LOGO.svg';
-import searchIcon from '../../../assets/images/navbar/Group.png';
-import { Switcher } from '../../../utils';
+import { FaSearch } from 'react-icons/fa';
+import { Switcher } from '../../../utils/index.js';
+import logo from '../../../assets/logo.svg';
+
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from '@material-tailwind/react';
 
 export function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -33,39 +40,29 @@ export function Navbar() {
     }
   }, [lastScrollY]);
   return (
-    <nav
-    className={`fixed top-0 w-full z-10 transition-transform duration-300 ${
-      isVisible ? "translate-y-0" : "-translate-y-full"
-    } bg-transparent shadow-md`}
-  >
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        {/* Logo */}
-        <div className="flex items-center dark:invert">
-          <img src={logo} alt="Logo" width="50px" />
+    <nav className="bg-primary-light-250 dark:bg-primary-dark-250">
+      <div className="container flex justify-between items-center py-5 ">
+        <div className="w-12 mx-14 ">
+          <img src={logo} />
         </div>
-
-        {/* Menu Dropdown */}
-        <Menu as="div" className="relative">
-          <MenuButton className="flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-md text-gray-700 hover:bg-gray-200 focus:outline-none">
-            Options
-          </MenuButton>
-          <MenuItems className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="py-1">
-              <MenuItem as="div" className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100">
-                <Switcher />
-                <span className="ml-2 text-sm">Switcher</span>
+        <div className="flex mx-14 bg-primary-light-250 dark:bg-primary-dark-250">
+          <Menu placement="bottom">
+            <MenuHandler className="bg-primary-light-450 dark:bg-primary-dark-350">
+              <Button>Menu</Button>
+            </MenuHandler>
+            <MenuList className="flex p-1 bg-primary-light-450 dark:bg-primary-dark-350 border-none text-primary-light-700 dark:text-white">
+              <MenuItem>
+                <Switcher className="bg-primary-light-450 text-primary-light-700 dark:bg-primary-dark-350 " />
               </MenuItem>
-              <MenuItem as="div" className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100">
-                <FaUser size="20px" />
-                <span className="ml-2 text-sm">User</span>
+              <MenuItem>
+                <FaUser size="1.25rem" />
               </MenuItem>
-              <MenuItem as="div" className="flex items-center px-4 py-2 cursor-pointer hover:bg-gray-100">
-                <img src={searchIcon} alt="Search Icon" className="w-5 h-5" />
-                <span className="ml-2 text-sm">Search</span>
+              <MenuItem>
+                <FaSearch size="1.25rem" />
               </MenuItem>
-            </div>
-          </MenuItems>
-        </Menu>
+            </MenuList>
+          </Menu>
+        </div>
       </div>
     </nav>
   );

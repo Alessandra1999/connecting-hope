@@ -1,5 +1,5 @@
-import { Carousel, Typography, Button } from "@material-tailwind/react";
-import Background from '../../../assets/images/sliderBackground.png';
+import { Carousel, Typography, Button } from '@material-tailwind/react';
+import Background from '../../../assets/images/generics/sliderBackground.png';
 import Alessandra from '../../../assets/images/profiles/Alessandra.png';
 import Davi from '../../../assets/images/profiles/Davi.png';
 import Fernanda from '../../../assets/images/profiles/Fernanda.png';
@@ -29,7 +29,7 @@ const profiles = [
   },
   {
     picture: Davi,
-    name: 'Davi Amon',
+    name: 'Davi Amom',
     description: 'Desenvolvedor Full Stack na RevoluTI e estudante de Engenharia de Software. Apaixonado por música e programação.',
     linkedin: 'https://www.linkedin.com/in/daviamom/',
     github: 'https://github.com/DaviFrt'
@@ -67,8 +67,8 @@ const profiles = [
 function Slider() {
 
   return (
-    <div className="h-dvh flex w-screen">
-      <Carousel transition={{ duration: 1 }} className="h-5/6">
+    <div className="h-[43.75rem] flex w-screen max-w-full">
+      <Carousel autoplay={true} loop={true} transition={{ duration: 2 }} navigation={false} className="h-full">
         <div className="relative h-full w-full">
           <img
             src={Background}
@@ -90,7 +90,7 @@ function Slider() {
                 Conectando esperança, transformando o mundo
               </Typography>
               <div className="flex justify-center gap-2">
-                <Button className="border-black border bg-gradient-to-b from-primary-light-250 to-primary-light-400 font-normal text-primary-light-750" size="md">
+                <Button className="bg-gradient-to-b from-primary-light-250 to-primary-light-400 font-normal text-primary-light-750 dark:from-primary-dark-250 dark:to-primary-dark-500" size="md">
                   Cadastre uma ONG
                 </Button>
               </div>
@@ -98,24 +98,24 @@ function Slider() {
           </div>
         </div>
         {profiles.map(({ picture, name, description, linkedin, github }) => (
-          <div className="relative h-full w-full bg-gradient-to-l  from-primary-light-350 from-47% to-primary-light-650">
+          <div className="relative h-full w-full bg-gradient-to-l from-primary-light-350 from-47% to-primary-light-650 dark:from-primary-dark-650 from-47% dark:to-primary-dark-750">
             <div className="absolute inset-0 flex flex-col md:flex-row h-full w-full items-center justify-evenly">
-              <img src={picture} className="w-1/2 lg:w-1/5 md:w-1/3"></img>
-              <div className="flex flex-col items-center gap-7">
-                <h1 className="text-3xl md:text-3xl lg:text-7xl tracking-tighter font-sans font-bold text-primary-light-750">{name}</h1>
-                <p className="text-1xl md:text-2xl lg:text-4xl xl:max-w-screen-2xl max-w-80 text-center text-primary-light-750">{description}</p>
-                <div className="flex justify-evenly w-full md:justify-center md:gap-8">
-                  <a href={linkedin}><img src={Linkedin}></img></a>
-                  <a href={github}><img src={Github}></img></a>
+              <img src={picture} className="w-1/2 lg:w-1/5 md:w-1/3 lg:ml-14 md:ml-12"></img>
+              <div className="flex flex-col items-center gap-7 lg:mr-14 md:mr-10">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl tracking-tighter font-sans font-bold text-primary-light-750 dark:text-primary-dark-50">{name}</h1>
+                <p className="text-1xl md:text-2xl lg:text-3xl xl:max-w-screen-2xl max-w-80 text-center text-primary-light-750 dark:text-primary-dark-50">{description}</p>
+                <div className="flex justify-center w-full md:justify-center md:gap-8 mb-7">
+                  <a href={linkedin}><img src={Linkedin} className="w-3/4"></img></a>
+                  <a href={github}><img src={Github} className="w-3/4"></img></a>
                 </div>
               </div>
             </div>
           </div>
         ))}
-        <div className="relative h-full w-full bg-gradient-to-l from-primary-light-350 from-47% to-primary-light-650">
+        <div className="relative h-full w-full bg-gradient-to-l from-primary-light-350 from-47% to-primary-light-650 dark:from-primary-dark-650 from-47% dark:to-primary-dark-750">
           <div className="absolute inset-0 flex flex-col md:flex-row h-full w-full items-center justify-evenly">
             <div className="flex flex-col items-center gap-9 mx-7">
-              <h1 className="text-3xl md:text-3xl lg:text-7xl tracking-tighter font-sans font-bold text-primary-light-750">Tecnologias Utilizadas</h1>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl tracking-tighter font-sans font-bold text-primary-light-750 dark:text-primary-dark-50">Tecnologias Utilizadas</h1>
               <div className="flex justify-center w-1/6 md:w-1/3 lg:w-full xl:w-full md:justify-center md:gap-8">
                 <img src={Java}></img>
                 <img src={Maven}></img>
