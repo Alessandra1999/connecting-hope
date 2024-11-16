@@ -4,6 +4,7 @@ import UserForm from "../../components/registers-forms/UserForm";
 import OngForm from "../../components/registers-forms/OngForm";
 import { RecoveryPasswordForm } from "../../components/registers-forms/RecoveryPasswordForm";
 import { useNavigate } from "react-router-dom";
+import { userLogin } from "../../../api/apiService";
 
 export const MobileScreen = ({
   isLoginFormOpen,
@@ -26,8 +27,22 @@ export const MobileScreen = ({
 
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    navigate("/home");
+  const handleLogin = async (data) => {
+    try {
+      const user = await userLogin(data);
+
+      // if (user && user.authenticated) {
+      //   console.log("Usuário logado com sucesso");
+      //   navigate("/home"); 
+      // } else {
+      //   // Se as credenciais estiverem incorretas
+      //   console.log("Credenciais inválidas");
+      //   toast.error("Usuário não encontrado ou credenciais incorretas");
+      // }
+    } catch (error) {
+      console.error("Erro ao tentar logar", error);
+     // toast.error("Ocorreu um erro ao fazer o login. Tente novamente.");
+    }
   };
 
   return (

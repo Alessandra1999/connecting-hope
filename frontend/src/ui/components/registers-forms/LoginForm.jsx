@@ -27,9 +27,15 @@ const LoginForm = ({
       passwordUser: "",
     },
   });
+  const navigate = useNavigate()
 
-  const handleLogin = (e) => {
-    onLogin(register);
+  function handleLogin (data) {
+    try {
+      onLogin(data);
+    } catch(error) {
+      console.log(error)
+    }
+
   }
 
   return (
