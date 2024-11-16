@@ -109,7 +109,7 @@ export function DonationForm() {
         <Button className="w-1/3 md:w-1/6 text-md md:text-lg justify-center bg-primary-light-700 dark:bg-primary-dark-700 text-primary-light-50 font-bold" type="submit" disabled={!stripe}>
           Doar
         </Button>
-        <ToastContainer position="top-center" autoClose={3000} hideProgressBar />
+        <ToastContainer position="top-right" autoClose={3000} />
       </form>
     </div>
   );

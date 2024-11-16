@@ -60,3 +60,14 @@ export const createAccountLink = async (accountId) => {
     throw error;
   }
 };
+
+//Criar Usuário
+export const createUser = async (data) => {
+  try {
+    const response = await axios.post(`${API_URL}/users`, data);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao criar usuário:', error);
+    throw error;
+  }
+}

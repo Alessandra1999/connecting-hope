@@ -8,7 +8,9 @@ import com.hope.api_hope.model.User;
 import com.hope.api_hope.repository.NonProfitsCampaignRepository;
 import com.hope.api_hope.repository.UserOngRepository;
 import com.hope.api_hope.repository.UserRepository;
+import com.hope.api_hope.security.config.SecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +24,8 @@ public class UserService {
     private UserRepository userRepository;
     @Autowired
     private UserOngRepository userOngRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public List<UserDTO> getAllUsers(){
         List<UserDTO> users = userRepository.findAll().stream().map(UserMapper::toUserDTO).toList();
@@ -51,7 +55,7 @@ public class UserService {
         user.setNameUser(userDTO.getNameUser());
         user.setPhotoUser(userDTO.getPhotoUser());
         user.setEmail(userDTO.getEmailUser());
-        user.setPassword(userDTO.getPasswordUser());
+        user.setPassword(passwordEncoder.encode(userDTO.getPasswordUser()));
         user.setAddressUser(userDTO.getAddressUser());
         userRepository.save(user);
 

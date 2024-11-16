@@ -19,6 +19,7 @@ const stripePromise = loadStripe(
 export function AppRouter() {
   return (
     <Router>
+      
       <Routes>
         <Route path="/" element={<HomeNotLogged />} />
         <Route path="/home" element={<Home />} />

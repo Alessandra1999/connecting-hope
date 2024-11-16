@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package com.hope.api_hope.security.config;
 
 import org.springframework.context.annotation.Bean;
