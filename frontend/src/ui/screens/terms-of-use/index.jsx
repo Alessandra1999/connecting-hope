@@ -4,7 +4,7 @@ export function TermsOfUse() {
       <div className="max-w-[80%] mx-auto py-8 h-full flex flex-col items-center justify-center gap-4 md:max-w-screen-sm xl:max-w-screen-lg">
         <div className="text-center text-sm font-bold lg:text-3xl">
           <h1>Termos de Uso - Connecting Hope</h1>
-          <h2>Última Atualização: 17/10/24</h2>
+          <h2>Última Atualização: 13/11/24</h2>
         </div>
 
         <div className="text-xs flex flex-col gap-4 md:text-base lg:text-xl">
@@ -91,7 +91,7 @@ export function TermsOfUse() {
               Os usuários podem fazer doações diretamente às campanhas de ONGs
               através da nossa plataforma. Connecting Hope não cobra taxas sobre
               as doações, mas pode haver encargos do processador de pagamentos
-              PayPal.
+              Stripe.
             </p>
 
             <h3 className="font-bold">6.2 Reembolsos</h3>

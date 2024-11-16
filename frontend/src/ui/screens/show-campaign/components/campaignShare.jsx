@@ -17,7 +17,7 @@ export function CampaignShare({ campaignLink }) {
             navigator.clipboard.writeText(campaignLink);
           }}
         >
-          <FaRegCopy className="size-5" />
+          <FaRegCopy className="size-5 dark:text-white" />
         </IconButton>
       </div>
     </div>

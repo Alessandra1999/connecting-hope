@@ -2,7 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import { Profile, ShowCampaign, About } from '../ui/screens';
 
-export function Router() {
+export function AppRouter() {
   return (
     <div className="container bg-gradient-to-b from-primary-light-250 to-primary-light-400">
       <Switch>
