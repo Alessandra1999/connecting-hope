@@ -6,7 +6,6 @@ import {
   NonprofitsKnowMore,
 } from '../../components';
 import { useCampaigns } from '../../../hooks';
-import { Switcher } from '../../../utils/index';
 
 import { CampaignProgressCard, CampaignShare } from './components';
 import { useParams } from 'react-router-dom';
@@ -50,7 +49,6 @@ export function ShowCampaign() {
   return (
     <div className="w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 lg:flex-auto dark:from-primary-dark-250 dark:to-primary-dark-500">
       <div className="xl:max-w-screen-2xl xl:mx-auto px-16 py-10 flex-col flex gap-10">
-        <Switcher />
         <div className="flex justify-center font-black text-2xl xl:text-4xl xl:justify-start text-primary-dark-500 dark:text-white">
           {campaign.name}
         </div>

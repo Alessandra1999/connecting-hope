@@ -9,7 +9,6 @@ import Three from "../../../assets/images/home/svgs/3.svg";
 import Four from "../../../assets/images/home/svgs/4.svg";
 import Five from "../../../assets/images/home/svgs/5.svg";
 import Six from "../../../assets/images/home/svgs/6.svg";
-import { Footer } from "../../components/footer/footer";
 import { useNavigate } from "react-router-dom";
 
 const items = [
@@ -78,7 +77,7 @@ export const HomeNotLogged = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:bg-gradient-to-b dark:from-primary-dark-250 dark:to-primary-dark-400 text-xs">
       <div className="p-5">
-        <img src={Logo} width={100} alt="Logo" />
+        <img src={Logo} width={100} alt="Logo" className="dark:invert" />
       </div>
       <div className="flex lg:w-2/3 flex-col items-center text-center justify-center dark:text-white w-full max-w-7xl mx-auto p-2 lg:flex-row lg:items-start lg:text-left">
         <div>
@@ -181,7 +180,6 @@ export const HomeNotLogged = () => {
       <button className="mt-10 px-3 py-2 mb-10 text-sm text-[#fff] bg-primary-light-700 dark:bg-primary-dark-700 rounded-lg hover:bg-teal-800">
         Cadastre uma ONG
       </button>
-      <Footer />
     </div>
   );
 };

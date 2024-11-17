@@ -13,6 +13,8 @@ import {
   DonationForm,
 } from "../ui/screens";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { Footer } from "../ui/components/footer/footer";
+import { Navbar } from "../ui/components/navbar";
 
 const stripePromise = loadStripe(
   "pk_test_51QIIX6A7y85OqFb27poIhPEN2QMX1kWfM2fVi6M9YFA0dR7PQXdIV5mDlgBG9d2Xz0LaEEWq0kBsXL2EoKJR1uew00lUISKyYB"
@@ -27,27 +29,46 @@ export function AppRouter() {
         <Route path="/" element={<HomeNotLogged />} />
         <Route
           path="/login"
-          element={<InitialScreen onLogin={() => setIsLoggedIn(true)} />}
+          element={
+          <InitialScreen onLogin={() => setIsLoggedIn(true)} />
+        }
         />
         <Route
           path="/home"
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Navbar />
               <Home />
             </ProtectedRoute>
           }
         />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={
+          <>
+          <Navbar />
+          <About />
+          </>
+          } />
         <Route
           path="/campaign/:campaignId"
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Navbar />
               <ShowCampaign />
             </ProtectedRoute>
           }
         />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={
+          <>
+          <Navbar />
+          <TermsOfUse />
+          </>
+          } />
+        <Route path="/privacy-policy" element={
+          <>
+          <Navbar />
+          <PrivacyPolicy />
+          </>
+          } />
         <Route
           path="/donation-form"
           element={
@@ -57,6 +78,7 @@ export function AppRouter() {
           }
         />
       </Routes>
+      <Footer />
     </Router>
   );
 }

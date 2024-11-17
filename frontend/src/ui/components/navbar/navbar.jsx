@@ -43,11 +43,11 @@ export function Navbar() {
     <nav className="bg-primary-light-250 dark:bg-primary-dark-250">
       <div className="container flex justify-between items-center py-5 ">
         <div className="w-12 mx-14 ">
-          <img src={logo} />
+          <img src={logo} className="dark:invert"/>
         </div>
         <div className="flex mx-14 bg-primary-light-250 dark:bg-primary-dark-250">
           <Menu placement="bottom">
-            <MenuHandler className="bg-primary-light-450 dark:bg-primary-dark-350">
+            <MenuHandler className="bg-primary-light-450 dark:bg-primary-dark-350 text-primary-light-750 dark:text-primary-dark-50">
               <Button>Menu</Button>
             </MenuHandler>
             <MenuList className="flex p-1 bg-primary-light-450 dark:bg-primary-dark-350 border-none text-primary-light-700 dark:text-white">

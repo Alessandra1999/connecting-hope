@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navbar } from "../../components/navbar";
 import firstHeroImage from "../../../assets/images/home/first-image.jpg";
 import secondImage from '../../../assets/images/home/second-image.png'
 import thirdHeroImage from "../../../assets/images/home/three-image.png";
@@ -10,7 +9,6 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 import NonProfitsCard from "../../components/campaigns-card/NonProfitsCard";
 import NonProfitsComment from "../../components/campaigns-card/NonProfitsComment";
-import { Footer } from '../../components/footer/footer';
 import { SliderHome } from '../../components/slider/SliderHome';
 
 export function Home() {
@@ -73,9 +71,6 @@ export function Home() {
 
   return (
     <div className="w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:bg-gradient-to-b dark:from-primary-dark-250 dark:to-primary-dark-400 text-xs">
-      <div className='py-10'>
-        <Navbar />
-      </div>
       <div>
         <div className="relative max-h-screen h-full">
           <div className="max-w-[26vw] w-full h-[22vh] md:max-w-[24vw] md:h-[28vh] lg:max-w-[24vw] lg:h-[30vh] xl:max-w-[14vw] xl:h-[36vh] absolute top-0 left-5 lg:left-12">
@@ -178,7 +173,6 @@ export function Home() {
           </div>
         ))}
       </div>
-      <Footer />
     </div>
   );
 }

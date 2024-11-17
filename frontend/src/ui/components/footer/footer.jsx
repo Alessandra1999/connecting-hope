@@ -3,7 +3,7 @@ import { Switcher } from '../../../utils';
 
 export function Footer() {
   return (
-    <div className="w-full bg-transparent text-[#1E1E1E] dark:text-white py-6">
+    <div className="w-full bg-primary-light-400 dark:bg-primary-dark-500 text-[#1E1E1E] dark:text-white py-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-evenly">
           <div className="flex flex-col items-start space-y-2">
