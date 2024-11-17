@@ -7,19 +7,21 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-evenly">
           <div className="flex flex-col items-start space-y-2">
-            <h3 className="text-lg">Sobre</h3>
-            <h3 className="text-lg">Equipe</h3>
-            <h3 className="text-lg">Contato</h3>
-            <h3 className="text-lg">Termos de Uso</h3>
+            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Sobre</Link></h3>
+            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Equipe</Link></h3>
+            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Contato</Link></h3>
+            <h3 className="text-lg"><Link to="/terms-of-use" relative="path" reloadDocument>Termos de Uso</Link></h3>
           </div>
           <div className="flex flex-col items-start space-y-2">
-            <h3 className="text-lg">Relatar Erros/Sugestões</h3>
-            <h3 className="text-lg">Política de Privacidade</h3>
-            <h3 className="text-lg">FAQ</h3>
+            <h3 className="text-lg"><Link to="/privacy-policy" relative="path" reloadDocument>Relatar Erros/Sugestões</Link></h3>
+            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Política de Privacidade</Link></h3>
+            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>FAQ</Link></h3>
           </div>
           <div className="flex flex-col items-center space-y-2">
-            <img src={Logo} alt="Logo" className="w-12 dark:invert" />
-            <Switcher />
+            <Link to="/" relative="path" reloadDocument>
+              <img src={Logo} alt="Logo" className="w-12 dark:invert" />
+              <Switcher />
+            </Link>
           </div>
         </div>
         <div className="mt-4 flex justify-center text-center text-sm">
