@@ -49,8 +49,8 @@ export function Footer() {
           <div className="flex flex-col items-center space-y-2">
             <Link to="/" relative="path" reloadDocument>
               <img src={Logo} alt="Logo" className="w-12 dark:invert" />
-              <Switcher />
             </Link>
+            <Switcher />
           </div>
         </div>
         <div className="mt-4 flex justify-center text-center text-sm">

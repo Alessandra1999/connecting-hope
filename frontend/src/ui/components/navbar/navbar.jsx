@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { FaUser } from 'react-icons/fa6';
-import { FaSearch } from 'react-icons/fa';
-import { Switcher } from '../../../utils/index.js';
-import logo from '../../../assets/logo.svg';
+import { FaUser } from "react-icons/fa6";
+import { FaSearch } from "react-icons/fa";
+import { Switcher } from "../../../utils/index.js";
+import logo from "../../../assets/logo.svg";
 
 import {
   Menu,
@@ -10,7 +10,7 @@ import {
   MenuList,
   MenuItem,
   Button,
-} from '@material-tailwind/react';
+} from "@material-tailwind/react";
 
 export function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -43,7 +43,7 @@ export function Navbar() {
     <nav className="bg-primary-light-250 dark:bg-primary-dark-250">
       <div className="container flex justify-between items-center py-5 ">
         <div className="w-12 mx-14 ">
-          <img src={logo} className="dark:invert"/>
+          <img src={logo} className="dark:invert" />
         </div>
         <div className="flex mx-14 bg-primary-light-250 dark:bg-primary-dark-250">
           <Menu placement="bottom">
