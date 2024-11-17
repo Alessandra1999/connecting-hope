@@ -74,8 +74,12 @@ export const HomeNotLogged = () => {
     navigate("/login");
   };
 
+  const navigateAbout = () => {
+    navigate("about");
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:bg-gradient-to-b dark:from-primary-dark-250 dark:to-primary-dark-400 text-xs">
+    <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-to-b from-primary-light-250 to-primary-light-400 dark:from-primary-dark-250 dark:to-primary-dark-500 text-xs">
       <div className="p-5">
         <img src={Logo} width={100} alt="Logo" className="dark:invert" />
       </div>
@@ -100,7 +104,10 @@ export const HomeNotLogged = () => {
               futuro.
             </p>
             <div className="grid grid-cols-2 gap-4">
-              <button className="px-3 py-2 text-sm mx-5 text-[#fff] bg-[#757575] rounded-lg hover:bg-[#504F4FFF]">
+              <button
+                onClick={navigateAbout}
+                className="px-3 py-2 text-sm mx-5 text-[#fff] bg-[#757575] rounded-lg hover:bg-[#504F4FFF]"
+              >
                 Quero saber mais
               </button>
               <button
@@ -177,7 +184,10 @@ export const HomeNotLogged = () => {
           ))}
         </div>
       </div>
-      <button className="mt-10 px-3 py-2 mb-10 text-sm text-[#fff] bg-primary-light-700 dark:bg-primary-dark-700 rounded-lg hover:bg-teal-800">
+      <button
+        onClick={navigateLogin}
+        className="mt-10 px-3 py-2 mb-10 text-sm text-[#fff] bg-primary-light-700 dark:bg-primary-dark-700 rounded-lg hover:bg-teal-800"
+      >
         Cadastre uma ONG
       </button>
     </div>

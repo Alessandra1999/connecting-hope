@@ -3,8 +3,15 @@ import Background from "../../../assets/images/generics/sliderBackground.png";
 import BoxOfFood from "../../../assets/images/sliderHome/boxOfFood.jpg";
 import Medicine from "../../../assets/images/sliderHome/medicine.jpg";
 import PeopleSharing from "../../../assets/images/sliderHome/peopleSharing.jpg";
+import { useNavigate } from "react-router-dom";
 
 export function SliderHome() {
+  const navigate = useNavigate();
+
+  const navigateLogin = () => {
+    navigate("/login");
+  };
+
   return (
     <div className="h-[43.75rem] flex w-screen max-w-full">
       <Carousel
@@ -36,6 +43,7 @@ export function SliderHome() {
               </Typography>
               <div className="flex justify-center gap-2">
                 <Button
+                  onClick={navigateLogin}
                   className="bg-gradient-to-b from-primary-light-250 to-primary-light-400 font-normal text-primary-light-750 dark:from-primary-dark-250 dark:to-primary-dark-500 dark:text-white"
                   size="md"
                 >

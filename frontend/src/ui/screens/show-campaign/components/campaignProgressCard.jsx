@@ -28,7 +28,7 @@ export function CampaignProgressCard({ campaign }) {
   return (
     <div className="h-full flex flex-col gap-4">
       <div className=" w-full">
-        <Button className="w-full bg-primary-light-700 font-bold text-2xl"
+        <Button className="w-full bg-primary-light-700 dark:bg-primary-dark-700 font-bold text-2xl"
         onClick={handleNavigate}>
           DOE AGORA
         </Button>

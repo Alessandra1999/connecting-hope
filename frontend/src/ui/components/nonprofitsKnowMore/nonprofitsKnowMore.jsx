@@ -15,7 +15,7 @@ export function NonprofitsKnowMore() {
           ></img>
         </div>
         <div className="flex justify-center">
-          <Button className="bg-primary-light-700 font-bold text-xl w-60 dark:bg-primary-light-700">
+          <Button className="bg-primary-light-700 font-bold text-xl w-60 dark:bg-primary-dark-700">
             Saiba mais
           </Button>
         </div>
