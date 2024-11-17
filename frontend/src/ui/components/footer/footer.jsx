@@ -13,8 +13,8 @@ export function Footer() {
             <h3 className="text-lg"><Link to="/terms-of-use" relative="path" reloadDocument>Termos de Uso</Link></h3>
           </div>
           <div className="flex flex-col items-start space-y-2">
-            <h3 className="text-lg"><Link to="/privacy-policy" relative="path" reloadDocument>Relatar Erros/Sugestões</Link></h3>
-            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Política de Privacidade</Link></h3>
+            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Relatar Erros/Sugestões</Link></h3>
+            <h3 className="text-lg"><Link to="/privacy-policy" relative="path" reloadDocument>Política de Privacidade</Link></h3>
             <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>FAQ</Link></h3>
           </div>
           <div className="flex flex-col items-center space-y-2">
