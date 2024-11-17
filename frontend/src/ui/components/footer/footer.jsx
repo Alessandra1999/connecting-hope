@@ -1,5 +1,6 @@
-import Logo from '../../../assets/logo.svg'
-import { Switcher } from '../../../utils';
+import Logo from "../../../assets/logo.svg";
+import { Switcher } from "../../../utils";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -7,15 +8,43 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-evenly">
           <div className="flex flex-col items-start space-y-2">
-            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Sobre</Link></h3>
-            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Equipe</Link></h3>
-            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Contato</Link></h3>
-            <h3 className="text-lg"><Link to="/terms-of-use" relative="path" reloadDocument>Termos de Uso</Link></h3>
+            <h3 className="text-lg">
+              <Link to="/about" relative="path" reloadDocument>
+                Sobre
+              </Link>
+            </h3>
+            <h3 className="text-lg">
+              <Link to="/about" relative="path" reloadDocument>
+                Equipe
+              </Link>
+            </h3>
+            <h3 className="text-lg">
+              <Link to="/about" relative="path" reloadDocument>
+                Contato
+              </Link>
+            </h3>
+            <h3 className="text-lg">
+              <Link to="/terms-of-use" relative="path" reloadDocument>
+                Termos de Uso
+              </Link>
+            </h3>
           </div>
           <div className="flex flex-col items-start space-y-2">
-            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>Relatar Erros/Sugestões</Link></h3>
-            <h3 className="text-lg"><Link to="/privacy-policy" relative="path" reloadDocument>Política de Privacidade</Link></h3>
-            <h3 className="text-lg"><Link to="/about" relative="path" reloadDocument>FAQ</Link></h3>
+            <h3 className="text-lg">
+              <Link to="/about" relative="path" reloadDocument>
+                Relatar Erros/Sugestões
+              </Link>
+            </h3>
+            <h3 className="text-lg">
+              <Link to="/privacy-policy" relative="path" reloadDocument>
+                Política de Privacidade
+              </Link>
+            </h3>
+            <h3 className="text-lg">
+              <Link to="/about" relative="path" reloadDocument>
+                FAQ
+              </Link>
+            </h3>
           </div>
           <div className="flex flex-col items-center space-y-2">
             <Link to="/" relative="path" reloadDocument>
