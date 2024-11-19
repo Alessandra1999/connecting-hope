@@ -16,7 +16,7 @@ const NonProfitsCard = ({ campaign }) => {
       <div className="w-full max-w-xs sm:max-w-sm rounded-3xl shadow-lg mt-10 p-4 bg-gradient-to-b from-primary-light-300 to-primary-light-500 dark:bg-gradient-to-b dark:from-[#566981] dark:to-[#3A4A5F] relative">
         <div className="flex justify-center mb-4">
           <img
-            src={imageCard}
+            src={campaign.imageUrl}
             alt={campaign.title}
             className="rounded-3xl w-full h-auto object-cover"
           />

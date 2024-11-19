@@ -14,18 +14,19 @@ import { SliderHome } from "../../components/slider/SliderHome";
 export function Home() {
   const campaignsMock = [
     {
-      title: "Abrace uma Vida",
+      title: "Campanha Doe Uma Ração",
       description:
-        "Uma campanha voltada para fornecer apoio emocional e material a crianças em situação de vulnerabilidade. Junte-se a nós e faça a diferença!",
+        "Arrecadação de fundos para comprar ração para os doguinhos do abrigo!",
       imageUrl:
-        "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
-      countOfLikes: 12,
-      expiresIn: "15/11/2024",
+        "https://images.pexels.com/photos/28860735/pexels-photo-28860735/free-photo-of-yorkshire-terrier-em-cama-de-cachorro-ao-ar-livre.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        userPictureUrl: "https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2017/09/26/1659687.png",
+        countOfLikes: 12,
+      expiresIn: "12/12/2024",
       feedbacks: [
         {
           personName: "Marcos",
           feedback:
-            "Participar dessa campanha foi uma experiência incrível! Saber que estou ajudando crianças a terem um futuro melhor não tem preço.",
+            "Participar dessa campanha foi uma experiência incrível! Saber que estou ajudando cachorrinhos a terem um futuro melhor não tem preço.",
         },
       ],
     },
@@ -34,9 +35,10 @@ export function Home() {
       description:
         "Iniciativa que promove a educação de jovens carentes, oferecendo cursos de capacitação e bolsas de estudo. Junte-se a essa transformação.",
       imageUrl:
-        "https://i.pinimg.com/736x/62/55/d1/6255d1a111d6fbbb06a396cbdd3079d4.jpg",
+        "https://images.pexels.com/photos/8199187/pexels-photo-8199187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       countOfLikes: 8,
-      expiresIn: "20/11/2024",
+      userPictureUrl: "https://i.pinimg.com/236x/c5/c8/f3/c5c8f33a1f8d92ead5d6fd3db7748e32.jpg",
+      expiresIn: "20/01/2025",
       feedbacks: [
         {
           personName: "Beatriz",
@@ -49,9 +51,10 @@ export function Home() {
       title: "Sorrisos no Horizonte",
       description:
         "Campanha para levar atendimento odontológico gratuito a comunidades carentes. Ajude a devolver sorrisos e autoestima para quem mais precisa.",
+        imageUrl: "https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       userPictureUrl: "https://github.com/davifrt.png",
       countOfLikes: 45,
-      expiresIn: "05/01/2024",
+      expiresIn: "05/01/2025",
       feedbacks: [
         {
           personName: "Lucas",
@@ -64,7 +67,8 @@ export function Home() {
       title: "Esperança em Movimento",
       description:
         "A campanha busca levar alimentos e suprimentos a comunidades afetadas por desastres naturais. Sua ajuda pode salvar vidas!",
-      userPictureUrl: "https://github.com/davifrt.png",
+        imageUrl: "https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      userPictureUrl: "https://pm1.aminoapps.com/7191/c3bd19489a08a0c2c47f275e68d764f08e40e2fbr1-736-736v2_hq.jpg",
       countOfLikes: 30,
       expiresIn: "30/12/2024",
       feedbacks: [
