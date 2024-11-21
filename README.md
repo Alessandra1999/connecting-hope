@@ -1,8 +1,8 @@
 # Connecting Hope
-:construction: Projeto em construção :construction:
+Entrega parcial do projeto, MVP com simulações de funcionamento para apresentação.
 
 # Descrição do Projeto
-Repositório criado para o projeto de conclusão do curso de Dev Full Sack Jr da +praTi
+Connecting-Hope é uma plataforma de doações onde ONGs podem fazer o cadastro e criar campanhas de doação e usuários podem se cadastrar e doar para essas campanhas. O objetivo da plataforma é totalmente focado na solidariedade, portanto, o valor das doações é repassado diretamente e totalmente para as ONGs, sem reter parte do valor.
 
 # Tecnologias Utilizadas
 - `Java 17`
