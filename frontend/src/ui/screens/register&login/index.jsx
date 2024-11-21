@@ -54,7 +54,7 @@ export function InitialScreen() {
       </div>
 
       {/* Contêiner central para os formulários */}
-      <div className="flex items-center justify-center mt-24 lg:mt-10">
+      <div className="flex items-center justify-center mt-10">
         {/* Renderização Condicional de Mobile ou Desktop */}
         <MobileScreen
           isLoginFormOpen={isLoginFormOpen}

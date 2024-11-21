@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import {
   ShowCampaign,
   About,
@@ -21,7 +22,7 @@ const stripePromise = loadStripe(
 );
 
 export function AppRouter() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <Router>
@@ -30,8 +31,10 @@ export function AppRouter() {
         <Route
           path="/login"
           element={
-          <InitialScreen onLogin={() => setIsLoggedIn(true)} />
-        }
+            <GoogleOAuthProvider clientId="85589774474-n1ecmsdgd981guhng35k6etovh41p0ea.apps.googleusercontent.com">
+              <InitialScreen onLogin={() => setIsLoggedIn(true)} />
+            </GoogleOAuthProvider>
+          }
         />
         <Route
           path="/home"
@@ -42,33 +45,42 @@ export function AppRouter() {
             </ProtectedRoute>
           }
         />
-        <Route path="/about" element={
-          <>
-          <Navbar />
-          <About />
-          </>
-          } />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <About />
+            </>
+          }
+        />
         <Route
           path="/campaign/:campaignId"
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <>
               <Navbar />
               <ShowCampaign />
-            </ProtectedRoute>
+            </>
           }
         />
-        <Route path="/terms-of-use" element={
-          <>
-          <Navbar />
-          <TermsOfUse />
-          </>
-          } />
-        <Route path="/privacy-policy" element={
-          <>
-          <Navbar />
-          <PrivacyPolicy />
-          </>
-          } />
+        <Route
+          path="/terms-of-use"
+          element={
+            <>
+              <Navbar />
+              <TermsOfUse />
+            </>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <>
+              <Navbar />
+              <PrivacyPolicy />
+            </>
+          }
+        />
         <Route
           path="/donation-form"
           element={

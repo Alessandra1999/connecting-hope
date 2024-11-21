@@ -1,14 +1,13 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
-import imageCard from "../../../assets/images/home/imageCard.png";
 import { useNavigate } from "react-router-dom";
 
 const NonProfitsCard = ({ campaign }) => {
   const navigate = useNavigate();
 
   const navigateCampaign = () => {
-    navigate("/campaign/1");
+    navigate("/campaign/1");  //Gambiarra para fazer a apresentação
   };
 
   return (

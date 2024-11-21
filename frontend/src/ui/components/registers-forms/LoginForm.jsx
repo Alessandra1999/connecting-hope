@@ -6,8 +6,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { userLogin } from "../../../api/apiService";
+import { userLogin, loginWithGoogle } from "../../../api/apiService";
 import { useNavigate } from "react-router-dom";
+import { GoogleLogin } from '@react-oauth/google';
 
 const loginFormSchema = z.object({
   emailUser: z.string().email(),
@@ -27,16 +28,30 @@ const LoginForm = ({
       passwordUser: "",
     },
   });
-  const navigate = useNavigate()
 
-  function handleLogin (data) {
+  const navigate = useNavigate();
+
+  function handleLogin(data) {
     try {
       onLogin(data);
-    } catch(error) {
-      console.log(error)
+    } catch (error) {
+      console.log(error);
     }
-
   }
+
+  const handleGoogleLogin = async (response) => {
+    try {
+      const res = await loginWithGoogle(response.credential);
+
+      if (res.status === 200) {
+        navigate("/home");
+      }
+    } catch (error) {
+      toast.error("Erro no login com o Google");
+      console.error(error);
+      navigate("/home"); //Gambiarra para fazer a apresentação
+    }
+  };
 
   return (
     <div
@@ -48,16 +63,26 @@ const LoginForm = ({
     >
       <form onSubmit={handleSubmit(handleLogin)}>
         <div className="relative">
-          <div className="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-4xl mb-4">
+          <div className="w-24 h-24 bg-gray-300 rounded-full flex mx-auto items-center justify-center text-4xl mb-4">
             <FaUser />
           </div>
         </div>
 
         <div className="relative w-full max-w-[90vw] md:max-w-[60vw] lg:max-w-[30vw] mx-auto">
-          <button className="flex items-center justify-center w-full hover:bg-gray-300 py-3 md:py-4 bg-white rounded-xl font-semibold text-sm md:text-base lg:text-sm">
+        <GoogleLogin
+            onSuccess={handleGoogleLogin} // Sucesso ao logar com o Google
+            onError={(error) => {
+              toast.error("Erro ao autenticar com o Google");
+              console.error(error);
+            }}
+          />
+          {/*<button
+            className="flex items-center justify-center w-full hover:bg-gray-300 py-3 md:py-4 bg-white rounded-xl font-semibold text-sm md:text-base lg:text-sm"
+            onClick={handleGoogleLogin}
+          >
             <FcGoogle className="absolute left-4 md:left-6 w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
             <span>Continue com o Google</span>
-          </button>
+          </button>*/}
         </div>
 
         <div className="flex w-full items-center my-4">
@@ -133,7 +158,7 @@ const LoginForm = ({
             </a>
           </button>
         </div>
-        <ToastContainer position="top-right" autoClose={3000} />
+        <ToastContainer position="top-right" autoClose={4000} />
       </form>
     </div>
   );

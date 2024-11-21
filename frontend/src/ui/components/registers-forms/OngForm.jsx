@@ -43,7 +43,7 @@ const OngForm = ({ openLoginForm }) => {
     >
       <form>
         <div className="relative mb-4">
-          <div className="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-4xl overflow-hidden">
+          <div className="w-24 h-24 bg-gray-300 rounded-full flex mx-auto items-center justify-center text-4xl overflow-hidden">
             {profileImage ? (
               <img
                 src={profileImage}
@@ -54,7 +54,7 @@ const OngForm = ({ openLoginForm }) => {
               <FaUser />
             )}
           </div>
-          <button className="absolute bottom-2 right-2 bg-white p-2 rounded-full shadow-md">
+          <button className="absolute bottom-2 right-20 bg-white p-2 rounded-full shadow-md">
             <FaCamera className="text-[#1E1E1E]" />
             <input
               type="file"

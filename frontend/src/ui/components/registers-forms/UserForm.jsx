@@ -47,10 +47,10 @@ const UserForm = ({ openLoginForm }) => {
     >
       <form onSubmit={handleSubmit(onUserRegisterFormSubmit)}>
         <div className="relative">
-          <div className="w-24 h-24 bg-gray-300 rounded-full flex items-center justify-center text-4xl mb-4">
+          <div className="w-24 h-24 bg-gray-300 rounded-full flex mx-auto items-center justify-center text-4xl mb-4">
             <FaUser />
           </div>
-          <button className="absolute bottom-2 right-2 bg-white p-2 rounded-full shadow-md">
+          <button className="absolute bottom-2 right-20 bg-white p-2 rounded-full shadow-md">
             <FaCamera className="text-[#1E1E1E]" />
           </button>
         </div>

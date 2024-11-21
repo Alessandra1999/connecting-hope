@@ -84,3 +84,18 @@ export const userLogin = async (data) => {
     throw error;
   }
 }
+
+export const loginWithGoogle = async (googleToken) => {
+  try {
+    const response = await axios.post(`${API_URL}/auth/google`, { token: googleToken});
+
+    if (response.data.token) {
+      localStorage.setItem('authToken', response.data.token);
+    }
+
+    return response;
+  } catch (error) {
+    console.error("Erro ao fazer login com o Google:", error);
+    throw error; 
+  }
+}
