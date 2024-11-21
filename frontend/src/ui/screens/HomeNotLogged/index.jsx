@@ -164,7 +164,7 @@ export const HomeNotLogged = () => {
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
           className="font-bold text-5xl mb-8 mx-auto max-w-4xl p-4"
         >
-          5 Motivos para escolher o Connecting Hope
+          6 Motivos para escolher o Connecting Hope
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl place-items-center mx-auto">
