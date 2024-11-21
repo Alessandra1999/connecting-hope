@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping("/{id}/nonProfit")
     public ResponseEntity<OngDTO> getUserOngById(@PathVariable Long id){
-       OngDTO ongDTO = service.getUserOngById(id);
+        OngDTO ongDTO = service.getUserOngById(id);
 
         return ongDTO != null ? ResponseEntity.ok(ongDTO) : ResponseEntity.notFound().build();
     }
